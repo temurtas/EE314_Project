@@ -132,14 +132,13 @@ The, laboratory , project
 \begin{figure}[h!]
 	\setlength{\unitlength}{\textwidth}
 	\center 
-	%\includegraphics[width=0.47\textwidth]{block1.png}
-	\caption{\label{fig:block_diagram}The Block Diagram for the project}
+	\includegraphics[width=0.47\textwidth]{block_diagram}
+	\caption{\label{fig:block_diagram}The Block Diagram of the project}
 \end{figure}
 
 	 \textit{Figure~\ref{fig:block_diagram}}    
 
-	deneme
-
+	
 %\begin{figure}[h!]
 %	\centering
 %	\begin{subfigure}{.48\textwidth}
@@ -159,14 +158,45 @@ The, laboratory , project
 %	\label{fig:VCOFor1kHz}
 %\end{figure}
 
+\subsection{ADC} \- \indent
 	
+
+\subsection{RAM} \- \indent
+
+\subsection{Computation Unit} \- \indent
+
+
+\subsection{Mode Selection (AC/DC)} \- \indent
+	Two slide switches will be assigned to retrieve the desired mode information from the user. According to the information the screen will display according to the desired mode.
+
+\paragraph{AC Mode} \- \indent
+	In AC Mode operation of the oscilloscope, the DC offset voltage is removed from the input voltage before it is reflected to the VGA monitor. For that Computation Unit will be used to extract offset information from stored data.
+
+\paragraph{DC Mode} \- \indent
+	In DC Mode operation of the oscilloscope, the DC offset voltage is untouched from the stored data of the input voltage. The stored data is reflected directly to the VGA monitor. 
 	
-\begin{figure}[h!]
-\setlength{\unitlength}{\textwidth}
-\center 
-%\includegraphics[width=0.25\unitlength]{triangular.png}
-%\caption{\label{fig:trimix}One Period of Triangular Wave }
-\end{figure}		
+
+\subsection{VGA Screen} \- \indent
+
+\paragraph*{Time/div Input} \- \indent
+
+\paragraph*{Voltage/div Input} \- \indent
+
+\paragraph*{Autoscale Input} \- \indent
+
+
+
+\paragraph*{VGA Controller} \- \indent
+	The VGA controller combines the numbers BRAM, the delta-t BRAM and the waveform to
+create a signal that is displayed on the computer monitor. Each of the BRAMs contains an image
+that is ready for display on the screen, but they must be positioned relative to each other and
+combined. The VGA controller also provides read/write timing for other modules. Since the
+BRAMs must be read 60 times per second, the VGA controller needs to send out a signal (write
+warning) to warn the decimal module and the menu FSM not to write when it is reading. The
+VGA controller also produces a select signal that controls which waveform BRAM is being
+written to/read from.
+
+	
 	
 \section{Conclusion}
 \- \indent
