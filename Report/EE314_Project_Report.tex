@@ -164,7 +164,7 @@ The, laboratory , project
 \subsection{RAM} \- \indent
 
 \subsection{Computation Unit} \- \indent
-
+	Computation unit is the unit responsible for all kinds of mathematical calculation of the project. This Unit can be considered as a brain of the project. 
 
 \subsection{Mode Selection (AC/DC)} \- \indent
 	Two slide switches will be assigned to retrieve the desired mode information from the user. According to the information the screen will display according to the desired mode.
@@ -177,24 +177,24 @@ The, laboratory , project
 	
 
 \subsection{VGA Screen} \- \indent
-
-\paragraph*{Time/div Input} \- \indent
-
-\paragraph*{Voltage/div Input} \- \indent
-
-\paragraph*{Autoscale Input} \- \indent
-
-
+	VGA is a widely used standard in video industry for the transmission of video signals from a computer or microprocessor into a monitor or TV. Each 640x480 image is called a ‘frame’ and each frame contains 480 lines which are made up of 640 pixels. We will use a standard LCD VGA Monitor as a display for our FPGA Oscilloscope. We will build a controller module for this part called VGA Controller. 
+	
 
 \paragraph*{VGA Controller} \- \indent
-	The VGA controller combines the numbers BRAM, the delta-t BRAM and the waveform to
-create a signal that is displayed on the computer monitor. Each of the BRAMs contains an image
-that is ready for display on the screen, but they must be positioned relative to each other and
-combined. The VGA controller also provides read/write timing for other modules. Since the
-BRAMs must be read 60 times per second, the VGA controller needs to send out a signal (write
-warning) to warn the decimal module and the menu FSM not to write when it is reading. The
-VGA controller also produces a select signal that controls which waveform BRAM is being
-written to/read from.
+
+	The VGA controller combines the data drom RAM and Computation Unit to create a signal that can be displayed on the VGA monitor. Each of the RAM Modules contains an image that is ready for display on the screen. However, the data must be positioned relative to each other and combined. Also this module performs once a second as desired in the project requirements. The VGA controller also gets data from different data inputs such as Time/div and Voltage/div in order to reflect the waveform as user requires.
+
+\paragraph*{Time/div Input} \- \indent
+	
+	This module will supply an input data for the VGA controller for user preferences. Two push buttons will be assigned for the Time/div inputs that can be considered as Time+/div and Time-/div. As user pushes to Time+/div button, the time scale will be larger than the previous value. Similarly, as the user pushes to Time-/div button, the time scale will be smaller than the previous value. According to user preferences, this module allows user to see wider or narrower parts of input waveform.
+	  
+\paragraph*{Voltage/div Input} \- \indent
+
+	This module will supply an input data for the VGA controller for user preferences. Two push buttons will be assigned for the Voltage/div inputs that can be considered as Voltage+/div and Voltage-/div. As user pushes to Voltage+/div button, the voltage scale will be larger than the previous value. Similarly, as the user pushes to Voltage-/div button, the voltage scale will be smaller than the previous value. According to user preferences, this module allows user to fit the voltage waveform to the screen.
+	
+\paragraph*{Autoscale Input} \- \indent
+
+	This module will also supply an input data for the VGA controller for user preferences. Since we are planning to use all push buttons for other modules. One slide switch will be assigned to this module. As the user triggers the button, this module will scale the waveform for the display such that it fits the display best.
 
 	
 	
