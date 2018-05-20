@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.15)  21 MAY 2018 01:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.15)  21 MAY 2018 02:10
 entering extended mode
 **./EE314_Project_Report.tex
 (EE314_Project_Report.tex
@@ -908,11 +908,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 LaTeX Warning: Unused global option(s):
     [paper].
 
-(EE314_Project_Report.aux
-
-LaTeX Warning: Label `b1' multiply defined.
-
-)
+(EE314_Project_Report.aux)
 \openout1 = `EE314_Project_Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
@@ -1025,55 +1021,52 @@ File: block_diagram.png Graphic file (type png)
 Package pdftex.def Info: block_diagram.png used on input line 135.
 (pdftex.def)             Requested size: 242.52063pt x 87.19664pt.
 
-
-LaTeX Warning: Citation `b2' on page 1 undefined on input line 162.
+<adc_block.jpg, id=6, 678.1335pt x 308.95425pt>
+File: adc_block.jpg Graphic file (type jpg)
+ <use adc_block.jpg>
+Package pdftex.def Info: adc_block.jpg used on input line 167.
+(pdftex.def)             Requested size: 242.52063pt x 110.488pt.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <./block_diagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+ <./block_diagram.png> <./adc_block.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 []\OT1/ptm/m/n/8 \De1-Soc CD." [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 \OT1/ptm/m/n/8 http://download.terasic.com/downloads/cd-rom/de1-soc/DE1-
  []
 
 
-Overfull \hbox (182.63657pt too wide) in paragraph at lines 209--212
+Overfull \hbox (182.63657pt too wide) in paragraph at lines 216--219
 \OT1/ptm/m/n/8 https://people.ece.cornell.edu/land/courses/eceprojectsland/STUD
 ENTPROJ/2015to2016/hj424/hj424[]report[]201605191237.pdf.
  []
 
 [2
 
-] (EE314_Project_Report.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (EE314_Project_Report.aux) ) 
 Here is how much of TeX's memory you used:
- 26378 strings out of 493323
- 512321 string characters out of 3139065
+ 26384 strings out of 493323
+ 512418 string characters out of 3139065
  593453 words of memory out of 3000000
- 29529 multiletter control sequences out of 15000+200000
- 568292 words of font info for 90 fonts, out of 3000000 for 9000
+ 29534 multiletter control sequences out of 15000+200000
+ 567185 words of font info for 89 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,7n,94p,10374b,364s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<D:/Program Files/Mi
-KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/urw/times/utmbi8a.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
-mr8a.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EE314_Project_Report.pdf (2 pages, 79194 bytes).
+{D:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base
+/8r.enc}<D:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><D:/Progr
+am Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><D:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on EE314_Project_Report.pdf (2 pages, 170946 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 33 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

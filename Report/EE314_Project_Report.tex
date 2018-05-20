@@ -159,7 +159,14 @@ The, laboratory , project
 %\end{figure}
 
 \subsection{ADC} \- \indent
-		This module quantizes the analog input data. The hardware used is LTC2308 that is built into the FPGA. The Altera provides an example code regarding the use of the built-in ADC\cite{b1}. By evaluating the provided functionalities of this example with the help of a MsC project \cite{b2}, a code is written in Verilog HDL and in Qsys environment. 
+		This module quantizes the analog input data. The hardware used is LTC2308 that is built into the FPGA. The Altera provides an example code regarding the use of the built-in ADC\cite{b1}. By evaluating the provided functionalities of this example with the help of a MsC project \cite{b2}, a code is written in Verilog HDL and in Qsys environment. Qsys instantiates the internal connections of embedded modules to use ADC controller. The resulting Qsys module is exported as BSF file and that is shown in \textit{Figure~\ref{fig:adc_block}}. This will be utilized as an ADC block. The code is written according to I/O ports of this block. But the ultimate ADC bus is output from "conduit\_end\_SDI" port of the ADC block.
+		
+		\begin{figure}[t!]
+			\setlength{\unitlength}{\textwidth}
+			\center 
+			\includegraphics[width=0.47\textwidth]{adc_block}
+			\caption{\label{fig:adc_block}The Block Diagram of the project}
+		\end{figure}
 
 \subsection{RAM} \- \indent
 
