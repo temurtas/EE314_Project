@@ -159,7 +159,7 @@ The, laboratory , project
 %\end{figure}
 
 \subsection{ADC} \- \indent
-	
+		This module quantizes the analog input data. The hardware used is LTC2308 that is built into the FPGA. The Altera provides an example code regarding the use of the built-in ADC\cite{b1}. By evaluating the provided functionalities of this example with the help of a MsC project \cite{b2}, a code is written in Verilog HDL and in Qsys environment. 
 
 \subsection{RAM} \- \indent
 
@@ -167,12 +167,12 @@ The, laboratory , project
 	Computation unit is the unit responsible for all kinds of mathematical calculation of the project. This Unit can be considered as a brain of the project. 
 
 \subsection{Mode Selection (AC/DC)} \- \indent
-	Two slide switches will be assigned to retrieve the desired mode information from the user. According to the information the screen will display according to the desired mode.
+	One slide switch will be assigned to retrieve the desired mode information from the user. Based on this information, screen will display the input signal either with the DC offset or without the DC offset.
 
-\paragraph{AC Mode} \- \indent
+\subsubsection{AC Mode} \- \indent
 	In AC Mode operation of the oscilloscope, the DC offset voltage is removed from the input voltage before it is reflected to the VGA monitor. For that Computation Unit will be used to extract offset information from stored data.
 
-\paragraph{DC Mode} \- \indent
+\subsubsection{DC Mode} \- \indent
 	In DC Mode operation of the oscilloscope, the DC offset voltage is untouched from the stored data of the input voltage. The stored data is reflected directly to the VGA monitor. 
 	
 
@@ -180,19 +180,19 @@ The, laboratory , project
 	VGA is a widely used standard in video industry for the transmission of video signals from a computer or microprocessor into a monitor or TV. Each 640x480 image is called a ‘frame’ and each frame contains 480 lines which are made up of 640 pixels. We will use a standard LCD VGA Monitor as a display for our FPGA Oscilloscope. We will build a controller module for this part called VGA Controller. 
 	
 
-\paragraph*{VGA Controller} \- \indent
+\subsubsection{VGA Controller} \- \indent
 
 	The VGA controller combines the data drom RAM and Computation Unit to create a signal that can be displayed on the VGA monitor. Each of the RAM Modules contains an image that is ready for display on the screen. However, the data must be positioned relative to each other and combined. Also this module performs once a second as desired in the project requirements. The VGA controller also gets data from different data inputs such as Time/div and Voltage/div in order to reflect the waveform as user requires.
 
-\paragraph*{Time/div Input} \- \indent
+\subsubsection{Time/div Input} \- \indent
 	
 	This module will supply an input data for the VGA controller for user preferences. Two push buttons will be assigned for the Time/div inputs that can be considered as Time+/div and Time-/div. As user pushes to Time+/div button, the time scale will be larger than the previous value. Similarly, as the user pushes to Time-/div button, the time scale will be smaller than the previous value. According to user preferences, this module allows user to see wider or narrower parts of input waveform.
 	  
-\paragraph*{Voltage/div Input} \- \indent
+\subsubsection{Voltage/div Input} \- \indent
 
 	This module will supply an input data for the VGA controller for user preferences. Two push buttons will be assigned for the Voltage/div inputs that can be considered as Voltage+/div and Voltage-/div. As user pushes to Voltage+/div button, the voltage scale will be larger than the previous value. Similarly, as the user pushes to Voltage-/div button, the voltage scale will be smaller than the previous value. According to user preferences, this module allows user to fit the voltage waveform to the screen.
 	
-\paragraph*{Autoscale Input} \- \indent
+\subsubsection{Autoscale Input} \- \indent
 
 	This module will also supply an input data for the VGA controller for user preferences. Since we are planning to use all push buttons for other modules. One slide switch will be assigned to this module. As the user triggers the button, this module will scale the waveform for the display such that it fits the display best.
 
@@ -205,8 +205,8 @@ The, laboratory , project
 	
 
 \begin{thebibliography}{00}
-\bibitem{b1} J.-J. Lin, Y.-P. Li, W.-C. Hsu, and T.-S. Lee, “Design of an FMCW radar baseband signal processing system for automotive application,” SpringerPlus, vol. 5, no. 1, 2016.	
-%\bibitem{b2} “LF353 Datasheet.” [Online]. Available: http://www.ti.com/lit/ds/symlink/lf353-n.pdf. [Accessed: 20-Jan-2018].
+\bibitem{b1} “De1-Soc CD.” [Online]. Available: http://download.terasic.com/downloads/cd-rom/de1-soc/DE1-SoC\_v.5.0.1\_HWrevF\_SystemCD.zip. [Accessed: 21-May-2018].
+\bibitem{b2} “Digital Scope Implemented on Altera DE1-SoC.” [Online]. Available: https://people.ece.cornell.edu/land/courses/eceprojectsland/STUDENTPROJ/2015to2016/hj424/hj424\_report\_201605191237.pdf. [Accessed: 21-May-2018].
 %\bibitem{b3} “2N7000 Datasheet.” [Online]. Available: https://www.onsemi.com/pub/Collateral/2N7000-D.PDF. [Accessed: 20-Jan-2018].
 %\bibitem{b4} “LF353 Datasheet.” [Online]. Available: http://www.falstad.com/circuit/e-vco.html.
 
