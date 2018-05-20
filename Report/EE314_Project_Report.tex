@@ -129,7 +129,7 @@ FGPA, oscilloscope, ADC, VGA
 	\setlength{\unitlength}{\textwidth}
 	\center 
 	\includegraphics[width=0.47\textwidth]{overall_diagram}
-	\caption{\label{fig:overall_diagram}The Block Diagram of the project}
+	\caption{\label{fig:overall_diagram}The Block Diagram of the Project}
 \end{figure}
 \section{Modules}
 The modules and functional blocks designed and used in the project are presented in this section.
@@ -159,11 +159,17 @@ The modules and functional blocks designed and used in the project are presented
 			\setlength{\unitlength}{\textwidth}
 			\center 
 			\includegraphics[width=0.47\textwidth]{adc_block}
-			\caption{\label{fig:adc_block}The Block Diagram of the project}
+			\caption{\label{fig:adc_block}The Block Diagram of the ADC}
 		\end{figure}
 
 \subsection{RAM} \- \indent
-	
+	The main function of RAM is to introduce a block to the system that can be both writable and readable. Writing is necessary to save data coming from ADC and reading is also necessary to process the data and show them on VGA screen. The RAM should work with FIFO structure to realize proper operation on VGA screen. "A FIFO (first-in-first-out) buffer is an "elastic" storage between two subsystems."\cite{b3}. A FIFO based read and write operation is depicted in \textit{Figure~\ref{fig:fifo_diagram}}. The RAM is designed in behaviour level however, yet not implemented. 
+	\begin{figure}[t!]
+		\setlength{\unitlength}{\textwidth}
+		\center 
+		\includegraphics[width=0.47\textwidth]{fifo_diagram}
+		\caption{\label{fig:fifo_diagram}FIFO Working Principle\cite{b3}}
+	\end{figure}
 
 \subsection{Computation Unit} \- \indent
 	Computation unit is the unit responsible for all kinds of mathematical calculation of the project. This Unit can be considered as a brain of the project. 
@@ -209,6 +215,7 @@ The modules and functional blocks designed and used in the project are presented
 \begin{thebibliography}{00}
 \bibitem{b1} “De1-Soc CD.” [Online]. Available: http://download.terasic.com/downloads/cd-rom/de1-soc/DE1-SoC\_v.5.0.1\_HWrevF\_SystemCD.zip. [Accessed: 21-May-2018].
 \bibitem{b2} “Digital Scope Implemented on Altera DE1-SoC.” [Online]. Available: https://people.ece.cornell.edu/land/courses/eceprojectsland/STUDENTPROJ/2015to2016/hj424/hj424\_report\_201605191237.pdf. [Accessed: 21-May-2018].
+\bibitem{b3} P.P. Chu, Embedded SoPC Design with NIOS II Processor and Verilog Examples. New Jersey, 2012.
 %\bibitem{b3} “2N7000 Datasheet.” [Online]. Available: https://www.onsemi.com/pub/Collateral/2N7000-D.PDF. [Accessed: 20-Jan-2018].
 %\bibitem{b4} “LF353 Datasheet.” [Online]. Available: http://www.falstad.com/circuit/e-vco.html.
 
