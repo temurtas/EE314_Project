@@ -153,7 +153,7 @@ The modules and functional blocks designed and used in the project are presented
 %\end{figure}
 
 \subsection{ADC} \- \indent
-		This module quantizes the analog input data. The hardware used is LTC2308 that is built into the FPGA. The Altera provides an example code regarding the use of the built-in ADC\cite{b1}. By evaluating the provided functionalities of this example with the help of a MsC project \cite{b2}, a code is written in Verilog HDL and in Qsys environment. Qsys instantiates the internal connections of embedded modules to use ADC controller. The resulting Qsys module is exported as BSF file and that is shown in \textit{Figure~\ref{fig:adc_block}}. This will be utilized as an ADC block. The code is written according to I/O ports of this block. But the ultimate ADC bus is output from "conduit\_end\_SDI" port of the ADC block.
+		This module quantizes the analog input data. The hardware used is LTC2308 that is built into the FPGA. The Altera provides an example code regarding the use of the built-in ADC\cite{b1}. By evaluating the provided functionalities of this example with the help of a MsC project \cite{b2}, a code is written in Verilog HDL and in Qsys environment. Qsys instantiates the internal connections of embedded modules to use ADC controller. The resulting Qsys module is exported as BSF file and that is shown in \textit{Figure~\ref{fig:adc_block}}. This will be utilized as an ADC block. The code is written according to I/O ports of this block. But the ultimate ADC bus is output from "conduit\_end\_SDI" port of the ADC block. 
 		
 		\begin{figure}[t!]
 			\setlength{\unitlength}{\textwidth}
@@ -163,7 +163,8 @@ The modules and functional blocks designed and used in the project are presented
 		\end{figure}
 
 \subsection{RAM} \- \indent
-	The main function of RAM is to introduce a block to the system that can be both writable and readable. Writing is necessary to save data coming from ADC and reading is also necessary to process the data and show them on VGA screen. The RAM should work with FIFO structure to realize proper operation on VGA screen. "A FIFO (first-in-first-out) buffer is an "elastic" storage between two subsystems."\cite{b3}. A FIFO based read and write operation is depicted in \textit{Figure~\ref{fig:fifo_diagram}}. The RAM is designed in behaviour level however, yet not implemented. 
+	The main function of RAM is to introduce a block to the system that can be both writable and readable. Writing is necessary to save data coming from ADC and reading is also necessary to process the data and show them on VGA screen. The RAM should work with FIFO structure to realize proper operation on VGA screen. "A FIFO (first-in-first-out) buffer is an "elastic" storage between two subsystems."\cite{b3}. A FIFO based read and write operation is depicted in \textit{Figure~\ref{fig:fifo_diagram}}. The RAM is designed in behaviour level however, yet not implemented. Possible state diagram for the RAM Module can be seen at \textit{Figure~\ref{fig:RAM State}}.
+	
 	\begin{figure}[t!]
 		\setlength{\unitlength}{\textwidth}
 		\center 
@@ -171,8 +172,18 @@ The modules and functional blocks designed and used in the project are presented
 		\caption{\label{fig:fifo_diagram}FIFO Working Principle\cite{b3}}
 	\end{figure}
 
+\begin{figure}[h!]
+			\setlength{\unitlength}{\textwidth}
+			\center 
+			\includegraphics[width=0.47\textwidth]{RAM_state}
+			\caption{\label{fig:RAM State} State Diagram for RAM}
+\end{figure}
+		
+		
 \subsection{Computation Unit} \- \indent
 	Computation unit is the unit responsible for all kinds of mathematical calculation of the project. For instance mean value calculation for the input signal are conducted in this unit. This Unit can be considered as a brain of the project. 
+
+\vfill
 
 \subsection{Mode Selection (AC/DC)} \- \indent
 	AC/DC Modes are one of the most fundamental mods of digital oscilloscopes in market. In this part we will build a module to build our own selection mode. One slide switch will be assigned to retrieve the desired mode information from the user. Based on this information, screen will display the input signal either with the DC offset or without the DC offset.
@@ -191,7 +202,7 @@ The modules and functional blocks designed and used in the project are presented
 			\setlength{\unitlength}{\textwidth}
 			\center 
 			\includegraphics[width=0.47\textwidth]{vga_pins}
-			\caption{\label{fig:vga_pins}The Block Diagram of the ADC}
+			\caption{\label{fig:vga_pins} VGA Input Pins}
 \end{figure}
 
 \subsubsection{VGA Controller} \- \indent
@@ -202,11 +213,13 @@ The modules and functional blocks designed and used in the project are presented
 			\setlength{\unitlength}{\textwidth}
 			\center 
 			\includegraphics[width=0.47\textwidth]{vga_controller}
-			\caption{\label{fig:vga_controller}The Block Diagram of the ADC}
+			\caption{\label{fig:vga_controller} VGA Controller}
 \end{figure}
 		
 			
 	This module will supply an input data for the VGA controller for user preferences. Two push buttons will be assigned for the Time/div inputs that can be considered as Time+/div and Time-/div. As user pushes to Time+/div button, the time scale will be larger than the previous value. Similarly, as the user pushes to Time-/div button, the time scale will be smaller than the previous value. According to user preferences, this module allows user to see wider or narrower parts of input waveform.
+
+\vfill	 
 	  
 \subsubsection{Voltage/div Input} \- \indent
 

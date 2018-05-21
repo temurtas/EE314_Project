@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.28)  21 MAY 2018 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.28)  21 MAY 2018 16:04
 entering extended mode
 **./EE314_Project_Report.tex
 (EE314_Project_Report.tex
@@ -1032,50 +1032,62 @@ Package pdftex.def Info: adc_block.jpg used on input line 161.
 File: fifo_diagram.jpg Graphic file (type jpg)
 
 <use fifo_diagram.jpg>
-Package pdftex.def Info: fifo_diagram.jpg used on input line 170.
+Package pdftex.def Info: fifo_diagram.jpg used on input line 171.
 (pdftex.def)             Requested size: 242.52063pt x 183.6493pt.
- [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+ <RAM_state.png, id=8, 298.86656pt x 310.15875pt>
+File: RAM_state.png Graphic file (type png)
+
+<use RAM_state.png>
+Package pdftex.def Info: RAM_state.png used on input line 178.
+(pdftex.def)             Requested size: 242.52063pt x 251.68628pt.
 
 
- <./overall_diagram.png> <./adc_block.jpg>]
-("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <./overall_diagram.png> <./adc_block.jpg>] ("C:\Program Files\MiKTeX 2.9\tex\l
+atex\ucs\uni-32.def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-<vga_pins.png, id=17, 1236.87094pt x 380.92313pt>
+<vga_pins.png, id=18, 1236.87094pt x 380.92313pt>
 File: vga_pins.png Graphic file (type png)
  <use vga_pins.png>
-Package pdftex.def Info: vga_pins.png used on input line 193.
+Package pdftex.def Info: vga_pins.png used on input line 204.
 (pdftex.def)             Requested size: 242.52063pt x 74.68948pt.
 
-<vga_controller.png, id=18, 1023.825pt x 459.96844pt>
+<vga_controller.png, id=19, 1023.825pt x 459.96844pt>
 File: vga_controller.png Graphic file (type png)
  <use vga_controller.png>
-Package pdftex.def Info: vga_controller.png used on input line 204.
+Package pdftex.def Info: vga_controller.png used on input line 215.
 (pdftex.def)             Requested size: 242.52063pt x 108.95587pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+[2 <./fifo_diagram.jpg> <./RAM_state.png> <./vga_pins.png> <./vga_controller.pn
+g>]
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 []\OT1/ptm/m/n/8 \De1-Soc CD." [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 \OT1/ptm/m/n/8 http://download.terasic.com/downloads/cd-rom/de1-soc/DE1-
  []
 
 
-Overfull \hbox (13.74916pt too wide) in paragraph at lines 229--230
+Overfull \hbox (13.74916pt too wide) in paragraph at lines 242--243
 \OT1/ptm/m/n/8 https://people.ece.cornell.edu/land/courses/eceprojectsland/STUD
 ENTPROJ/ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 \OT1/ptm/m/n/8 2015to2016/hj424/hj424[]report[]201605191237.pdf. [Ac-cessed: 21
 -
  []
 
-[2 <./fifo_diagram.jpg> <./vga_pins.png> <./vga_controller.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 232--235
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--248
 []\OT1/ptm/m/n/8 "VGA Dis-play Con-troller" [On-line]. Avaible :
  []
 
@@ -1083,21 +1095,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--235
 
 ] (EE314_Project_Report.aux) ) 
 Here is how much of TeX's memory you used:
- 26158 strings out of 493323
- 507539 string characters out of 3139066
- 589174 words of memory out of 3000000
- 29305 multiletter control sequences out of 15000+200000
+ 26164 strings out of 493323
+ 507638 string characters out of 3139066
+ 587174 words of memory out of 3000000
+ 29310 multiletter control sequences out of 15000+200000
  567185 words of font info for 89 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,7n,94p,10374b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,7n,94p,10374b,364s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base
 /8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on EE314_Project_Report.pdf (3 pages, 361515 bytes).
+Output written on EE314_Project_Report.pdf (3 pages, 373986 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
