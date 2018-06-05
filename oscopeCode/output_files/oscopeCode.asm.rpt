@@ -1,5 +1,5 @@
 Assembler report for oscopeCode
-Sun Jun 03 12:23:19 2018
+Mon Jun 04 11:10:19 2018
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/Erdem/Documents/GitHub/EE314_Project/oscopeCode/output_files/oscopeCode.sof
+  5. Assembler Device Options: C:/Users/temur/Desktop/Ekstra/6th Semester/EE 314/Project/oscopeCode/output_files/oscopeCode.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Jun 03 12:23:19 2018 ;
+; Assembler Status      ; Successful - Mon Jun 04 11:10:19 2018 ;
 ; Revision Name         ; oscopeCode                            ;
 ; Top-level Entity Name ; fifo                                  ;
 ; Family                ; Cyclone V                             ;
@@ -53,24 +53,24 @@ agreement for further details.
 +--------+---------+---------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                            ;
-+--------------------------------------------------------------------------------------+
-; File Name                                                                            ;
-+--------------------------------------------------------------------------------------+
-; C:/Users/Erdem/Documents/GitHub/EE314_Project/oscopeCode/output_files/oscopeCode.sof ;
-+--------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                        ;
++--------------------------------------------------------------------------------------------------+
+; File Name                                                                                        ;
++--------------------------------------------------------------------------------------------------+
+; C:/Users/temur/Desktop/Ekstra/6th Semester/EE 314/Project/oscopeCode/output_files/oscopeCode.sof ;
++--------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/Erdem/Documents/GitHub/EE314_Project/oscopeCode/output_files/oscopeCode.sof ;
-+----------------+-----------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                       ;
-+----------------+-----------------------------------------------------------------------------------------------+
-; Device         ; 5CSEMA5F31C6                                                                                  ;
-; JTAG usercode  ; 0x00B593A9                                                                                    ;
-; Checksum       ; 0x00B593A9                                                                                    ;
-+----------------+-----------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/temur/Desktop/Ekstra/6th Semester/EE 314/Project/oscopeCode/output_files/oscopeCode.sof ;
++----------------+-----------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                   ;
++----------------+-----------------------------------------------------------------------------------------------------------+
+; Device         ; 5CSEMA5F31C6                                                                                              ;
+; JTAG usercode  ; 0x00B59F94                                                                                                ;
+; Checksum       ; 0x00B59F94                                                                                                ;
++----------------+-----------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -79,13 +79,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
-    Info: Processing started: Sun Jun 03 12:23:10 2018
+    Info: Processing started: Mon Jun 04 11:10:09 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off oscopeCode -c oscopeCode
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 687 megabytes
-    Info: Processing ended: Sun Jun 03 12:23:19 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 4841 megabytes
+    Info: Processing ended: Mon Jun 04 11:10:19 2018
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 

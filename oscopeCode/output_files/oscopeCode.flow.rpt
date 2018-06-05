@@ -1,5 +1,5 @@
 Flow report for oscopeCode
-Sun Jun 03 12:23:31 2018
+Mon Jun 04 11:10:56 2018
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Sun Jun 03 12:23:31 2018      ;
+; Flow Status                     ; Successful - Mon Jun 04 11:10:56 2018      ;
 ; Quartus II 64-Bit Version       ; 14.1.0 Build 186 12/03/2014 SJ Web Edition ;
 ; Revision Name                   ; oscopeCode                                 ;
 ; Top-level Entity Name           ; fifo                                       ;
@@ -68,28 +68,28 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/03/2018 12:22:06 ;
+; Start date & time ; 06/04/2018 11:08:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; oscopeCode          ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                    ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 79515806879175.152801772601184 ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                              ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                       ; --            ; fifo        ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; fifo        ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --            ; fifo        ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; fifo                           ; oscopeCode    ; --          ; --             ;
-+-------------------------------------+--------------------------------+---------------+-------------+----------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 163730494921934.152809973500792 ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; fifo        ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; fifo        ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; fifo        ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; fifo                            ; oscopeCode    ; --          ; --             ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -97,12 +97,14 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 655 MB              ; 00:00:24                           ;
-; Fitter                    ; 00:00:48     ; 1.0                     ; 2053 MB             ; 00:01:03                           ;
-; Assembler                 ; 00:00:09     ; 1.0                     ; 687 MB              ; 00:00:09                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 961 MB              ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 602 MB              ; 00:00:01                           ;
-; Total                     ; 00:01:16     ; --                      ; --                  ; 00:01:44                           ;
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4819 MB             ; 00:00:23                           ;
+; Fitter                    ; 00:00:57     ; 1.0                     ; 6380 MB             ; 00:00:54                           ;
+; Assembler                 ; 00:00:10     ; 1.0                     ; 4841 MB             ; 00:00:09                           ;
+; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 5135 MB             ; 00:00:08                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4761 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4747 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4751 MB             ; 00:00:01                           ;
+; Total                     ; 00:01:33     ; --                      ; --                  ; 00:01:37                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,11 +113,13 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; ETPC             ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; ETPC             ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; ETPC             ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; ETPC             ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; ETPC             ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Temurtas         ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Temurtas         ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Temurtas         ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Temurtas         ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Temurtas         ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Temurtas         ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Temurtas         ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -127,6 +131,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off oscopeCode -c o
 quartus_asm --read_settings_files=off --write_settings_files=off oscopeCode -c oscopeCode
 quartus_sta oscopeCode -c oscopeCode
 quartus_eda --read_settings_files=off --write_settings_files=off oscopeCode -c oscopeCode
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog --write_settings_files=off oscopeCode -c oscopeCode --vector_source="C:/Users/temur/Desktop/Ekstra/6th Semester/EE 314/Project/oscopeCode/output_files/Waveform.vwf" --testbench_file="C:/Users/temur/Desktop/Ekstra/6th Semester/EE 314/Project/oscopeCode/simulation/qsim/Waveform.vwf.vt"
+quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory="C:/Users/temur/Desktop/Ekstra/6th Semester/EE 314/Project/oscopeCode/simulation/qsim/" oscopeCode -c oscopeCode
 
 
 

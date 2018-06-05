@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/temur/Desktop/Ekstra/6th Semester/EE 314/Project/oscopeCode/simulation/qsim
+vfifo
+Z1 !s110 1528099857
+!i10b 1
+!s100 O1S<FeXk7788O;KJ_2RcJ1
+I9^e3KM8^bz]9Qh8MPPg1n0
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1528099856
+8oscopeCode.vo
+FoscopeCode.vo
+L0 32
+Z3 OV;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1528099857.258000
+!s107 oscopeCode.vo|
+!s90 -work|work|oscopeCode.vo|
+!i113 1
+Z4 o-work work
+vfifo_vlg_check_tst
+R1
+!i10b 1
+!s100 N047B`GJ1<>L[=L>5Kk2U1
+I=YSeT1[IKahN1jjVGoWGa2
+R2
+R0
+Z5 w1528099854
+Z6 8Waveform.vwf.vt
+Z7 FWaveform.vwf.vt
+L0 66
+R3
+r1
+!s85 0
+31
+Z8 !s108 1528099857.406000
+Z9 !s107 Waveform.vwf.vt|
+Z10 !s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R4
+vfifo_vlg_sample_tst
+R1
+!i10b 1
+!s100 XNEbc7Ff^bfUikU6QN6^b2
+IKo^j;YV;AG?4PYlB5e5M62
+R2
+R0
+R5
+R6
+R7
+L0 30
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4
+vfifo_vlg_vec_tst
+R1
+!i10b 1
+!s100 Eh^6o>]KZ1nD7@bBGek;?1
+IbR9M0X=J>c9U_2^K@704Q0
+R2
+R0
+R5
+R6
+R7
+L0 439
+R3
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R4

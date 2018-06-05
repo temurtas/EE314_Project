@@ -1,0 +1,1030 @@
+$comment
+	File created using the following command:
+		vcd file oscopeCode.msim.vcd -direction
+$end
+$date
+	Mon Jun 04 11:10:57 2018
+$end
+$version
+	ModelSim Version 10.3c
+$end
+$timescale
+	1ps
+$end
+
+$scope module fifo_vlg_vec_tst $end
+$var reg 1 ! clk $end
+$var reg 12 " data_in [11:0] $end
+$var reg 1 # read_from_stack $end
+$var reg 1 $ rst $end
+$var reg 1 % write_to_stack $end
+$var wire 1 & data_out [11] $end
+$var wire 1 ' data_out [10] $end
+$var wire 1 ( data_out [9] $end
+$var wire 1 ) data_out [8] $end
+$var wire 1 * data_out [7] $end
+$var wire 1 + data_out [6] $end
+$var wire 1 , data_out [5] $end
+$var wire 1 - data_out [4] $end
+$var wire 1 . data_out [3] $end
+$var wire 1 / data_out [2] $end
+$var wire 1 0 data_out [1] $end
+$var wire 1 1 data_out [0] $end
+$var wire 1 2 stack_empty $end
+$var wire 1 3 stack_full $end
+$var wire 1 4 stack_half_full $end
+$var wire 1 5 sampler $end
+
+$scope module i1 $end
+$var wire 1 6 gnd $end
+$var wire 1 7 vcc $end
+$var wire 1 8 unknown $end
+$var tri1 1 9 devclrn $end
+$var tri1 1 : devpor $end
+$var tri1 1 ; devoe $end
+$var wire 1 < clk~input_o $end
+$var wire 1 = clk~inputCLKENA0_outclk $end
+$var wire 1 > write_to_stack~input_o $end
+$var wire 1 ? read_from_stack~input_o $end
+$var wire 1 @ ptr_gap[3]~0_combout $end
+$var wire 1 A rst~input_o $end
+$var wire 1 B ptr_gap[2]~1_combout $end
+$var wire 1 C ptr_gap[1]~3_combout $end
+$var wire 1 D ptr_gap[0]~2_combout $end
+$var wire 1 E write_ptr[0]~1_combout $end
+$var wire 1 F Equal0~0_combout $end
+$var wire 1 G write_ptr[1]~2_combout $end
+$var wire 1 H write_ptr[2]~0_combout $end
+$var wire 1 I stack_rtl_0_bypass[5]~feeder_combout $end
+$var wire 1 J read_ptr~1_combout $end
+$var wire 1 K always0~1_combout $end
+$var wire 1 L Equal2~0_combout $end
+$var wire 1 M read_ptr~2_combout $end
+$var wire 1 N read_ptr~0_combout $end
+$var wire 1 O stack~13_combout $end
+$var wire 1 P stack~0feeder_combout $end
+$var wire 1 Q stack~0_q $end
+$var wire 1 R data_in[0]~input_o $end
+$var wire 1 S stack~15_combout $end
+$var wire 1 T stack~1_q $end
+$var wire 1 U comb~0_combout $end
+$var wire 1 V stack_rtl_0_bypass[1]~feeder_combout $end
+$var wire 1 W stack~14_combout $end
+$var wire 1 X always0~1_wirecell_combout $end
+$var wire 1 Y ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 Z data_in[1]~input_o $end
+$var wire 1 [ data_in[2]~input_o $end
+$var wire 1 \ data_in[3]~input_o $end
+$var wire 1 ] data_in[4]~input_o $end
+$var wire 1 ^ data_in[5]~input_o $end
+$var wire 1 _ data_in[6]~input_o $end
+$var wire 1 ` data_in[7]~input_o $end
+$var wire 1 a data_in[8]~input_o $end
+$var wire 1 b data_in[9]~input_o $end
+$var wire 1 c data_in[10]~input_o $end
+$var wire 1 d data_in[11]~input_o $end
+$var wire 1 e stack_rtl_0|auto_generated|ram_block1a0~portbdataout $end
+$var wire 1 f data_out~0_combout $end
+$var wire 1 g always0~0_combout $end
+$var wire 1 h data_out[0]~reg0_q $end
+$var wire 1 i stack~2feeder_combout $end
+$var wire 1 j stack~2_q $end
+$var wire 1 k stack_rtl_0_bypass[8]~feeder_combout $end
+$var wire 1 l stack_rtl_0|auto_generated|ram_block1a1 $end
+$var wire 1 m data_out~1_combout $end
+$var wire 1 n data_out[1]~reg0_q $end
+$var wire 1 o stack_rtl_0_bypass[9]~feeder_combout $end
+$var wire 1 p stack~3feeder_combout $end
+$var wire 1 q stack~3_q $end
+$var wire 1 r stack_rtl_0|auto_generated|ram_block1a2 $end
+$var wire 1 s data_out~2_combout $end
+$var wire 1 t data_out[2]~reg0_q $end
+$var wire 1 u stack_rtl_0_bypass[10]~feeder_combout $end
+$var wire 1 v stack~4_q $end
+$var wire 1 w stack_rtl_0|auto_generated|ram_block1a3 $end
+$var wire 1 x data_out~3_combout $end
+$var wire 1 y data_out[3]~reg0_q $end
+$var wire 1 z stack~5_q $end
+$var wire 1 { stack_rtl_0|auto_generated|ram_block1a4 $end
+$var wire 1 | data_out~4_combout $end
+$var wire 1 } data_out[4]~reg0_q $end
+$var wire 1 ~ stack_rtl_0_bypass[12]~feeder_combout $end
+$var wire 1 !! stack~6feeder_combout $end
+$var wire 1 "! stack~6_q $end
+$var wire 1 #! stack_rtl_0|auto_generated|ram_block1a5 $end
+$var wire 1 $! data_out~5_combout $end
+$var wire 1 %! data_out[5]~reg0_q $end
+$var wire 1 &! stack~7_q $end
+$var wire 1 '! stack_rtl_0|auto_generated|ram_block1a6 $end
+$var wire 1 (! data_out~6_combout $end
+$var wire 1 )! data_out[6]~reg0_q $end
+$var wire 1 *! stack~8_q $end
+$var wire 1 +! stack_rtl_0|auto_generated|ram_block1a7 $end
+$var wire 1 ,! stack_rtl_0_bypass[14]~feeder_combout $end
+$var wire 1 -! data_out~7_combout $end
+$var wire 1 .! data_out[7]~reg0_q $end
+$var wire 1 /! stack_rtl_0_bypass[15]~feeder_combout $end
+$var wire 1 0! stack~9_q $end
+$var wire 1 1! stack_rtl_0|auto_generated|ram_block1a8 $end
+$var wire 1 2! data_out~8_combout $end
+$var wire 1 3! data_out[8]~reg0_q $end
+$var wire 1 4! stack~10_q $end
+$var wire 1 5! stack_rtl_0|auto_generated|ram_block1a9 $end
+$var wire 1 6! data_out~9_combout $end
+$var wire 1 7! data_out[9]~reg0_q $end
+$var wire 1 8! stack_rtl_0_bypass[17]~feeder_combout $end
+$var wire 1 9! stack~11feeder_combout $end
+$var wire 1 :! stack~11_q $end
+$var wire 1 ;! stack_rtl_0|auto_generated|ram_block1a10 $end
+$var wire 1 <! data_out~10_combout $end
+$var wire 1 =! data_out[10]~reg0_q $end
+$var wire 1 >! stack~12_q $end
+$var wire 1 ?! stack_rtl_0|auto_generated|ram_block1a11 $end
+$var wire 1 @! data_out~11_combout $end
+$var wire 1 A! data_out[11]~reg0_q $end
+$var wire 1 B! Equal1~0_combout $end
+$var wire 1 C! ptr_gap [3] $end
+$var wire 1 D! ptr_gap [2] $end
+$var wire 1 E! ptr_gap [1] $end
+$var wire 1 F! ptr_gap [0] $end
+$var wire 1 G! stack_rtl_0_bypass [0] $end
+$var wire 1 H! stack_rtl_0_bypass [1] $end
+$var wire 1 I! stack_rtl_0_bypass [2] $end
+$var wire 1 J! stack_rtl_0_bypass [3] $end
+$var wire 1 K! stack_rtl_0_bypass [4] $end
+$var wire 1 L! stack_rtl_0_bypass [5] $end
+$var wire 1 M! stack_rtl_0_bypass [6] $end
+$var wire 1 N! stack_rtl_0_bypass [7] $end
+$var wire 1 O! stack_rtl_0_bypass [8] $end
+$var wire 1 P! stack_rtl_0_bypass [9] $end
+$var wire 1 Q! stack_rtl_0_bypass [10] $end
+$var wire 1 R! stack_rtl_0_bypass [11] $end
+$var wire 1 S! stack_rtl_0_bypass [12] $end
+$var wire 1 T! stack_rtl_0_bypass [13] $end
+$var wire 1 U! stack_rtl_0_bypass [14] $end
+$var wire 1 V! stack_rtl_0_bypass [15] $end
+$var wire 1 W! stack_rtl_0_bypass [16] $end
+$var wire 1 X! stack_rtl_0_bypass [17] $end
+$var wire 1 Y! stack_rtl_0_bypass [18] $end
+$var wire 1 Z! write_ptr [2] $end
+$var wire 1 [! write_ptr [1] $end
+$var wire 1 \! write_ptr [0] $end
+$var wire 1 ]! read_ptr [2] $end
+$var wire 1 ^! read_ptr [1] $end
+$var wire 1 _! read_ptr [0] $end
+$var wire 1 `! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [39] $end
+$var wire 1 a! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [38] $end
+$var wire 1 b! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [37] $end
+$var wire 1 c! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [36] $end
+$var wire 1 d! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [35] $end
+$var wire 1 e! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [34] $end
+$var wire 1 f! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [33] $end
+$var wire 1 g! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [32] $end
+$var wire 1 h! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [31] $end
+$var wire 1 i! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [30] $end
+$var wire 1 j! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [29] $end
+$var wire 1 k! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [28] $end
+$var wire 1 l! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [27] $end
+$var wire 1 m! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [26] $end
+$var wire 1 n! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [25] $end
+$var wire 1 o! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [24] $end
+$var wire 1 p! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [23] $end
+$var wire 1 q! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [22] $end
+$var wire 1 r! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [21] $end
+$var wire 1 s! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [20] $end
+$var wire 1 t! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [19] $end
+$var wire 1 u! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [18] $end
+$var wire 1 v! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [17] $end
+$var wire 1 w! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [16] $end
+$var wire 1 x! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [15] $end
+$var wire 1 y! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [14] $end
+$var wire 1 z! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [13] $end
+$var wire 1 {! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [12] $end
+$var wire 1 |! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [11] $end
+$var wire 1 }! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [10] $end
+$var wire 1 ~! stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [9] $end
+$var wire 1 !" stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [8] $end
+$var wire 1 "" stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [7] $end
+$var wire 1 #" stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [6] $end
+$var wire 1 $" stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [5] $end
+$var wire 1 %" stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [4] $end
+$var wire 1 &" stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [3] $end
+$var wire 1 '" stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [2] $end
+$var wire 1 (" stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [1] $end
+$var wire 1 )" stack_rtl_0|auto_generated|ram_block1a0_PORTBDATAOUT_bus [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 "
+0#
+0$
+0%
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+12
+03
+04
+x5
+06
+17
+x8
+19
+1:
+1;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+1L
+0M
+0N
+0O
+1P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+1X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+0`
+0a
+0b
+0c
+0d
+0e
+0f
+0g
+0h
+0i
+0j
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+0r
+0s
+0t
+0u
+0v
+0w
+0x
+0y
+0z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0F!
+0E!
+0D!
+0C!
+0Y!
+0X!
+0W!
+0V!
+0U!
+0T!
+0S!
+0R!
+0Q!
+0P!
+0O!
+0N!
+0M!
+0L!
+0K!
+0J!
+0I!
+0H!
+0G!
+0\!
+0[!
+0Z!
+0_!
+0^!
+0]!
+0)"
+0("
+0'"
+0&"
+0%"
+0$"
+0#"
+0""
+0!"
+0~!
+0}!
+0|!
+0{!
+0z!
+0y!
+0x!
+0w!
+0v!
+0u!
+0t!
+0s!
+0r!
+0q!
+0p!
+0o!
+0n!
+0m!
+0l!
+0k!
+0j!
+0i!
+0h!
+0g!
+0f!
+0e!
+0d!
+0c!
+0b!
+0a!
+0`!
+$end
+#10000
+1%
+1>
+05
+1U
+1S
+1K
+1E
+1D
+0X
+#20000
+1!
+1<
+15
+1=
+1G!
+1\!
+1F!
+0S
+1W
+0L
+0E
+0D
+1C
+1V
+1G
+02
+#30000
+0%
+0>
+05
+0U
+0K
+0G
+1E
+1D
+0C
+1X
+#40000
+b1 "
+0!
+1R
+0<
+15
+0=
+#50000
+1#
+1%
+1?
+1>
+05
+1U
+1g
+1J
+1G
+0E
+#60000
+1!
+1<
+15
+1=
+1N!
+1H!
+1I!
+1Q
+1_!
+1[!
+0\!
+1M
+0J
+0V
+1E
+1f
+#70000
+0#
+0%
+0?
+0>
+05
+0U
+0g
+0M
+1J
+0E
+#80000
+b11 "
+b10 "
+0!
+0R
+1Z
+0<
+15
+0=
+1k
+1i
+#90000
+1#
+1?
+05
+1g
+1M
+0J
+0D
+#100000
+1%
+1!
+1>
+1<
+15
+1=
+1U
+1E
+1D
+1O!
+0N!
+0H!
+0G!
+0I!
+1J!
+1K!
+1^!
+0_!
+0F!
+1h
+0g
+0W
+11
+1L
+0f
+1m
+12
+0m
+#110000
+0#
+0?
+05
+1K
+0X
+#120000
+b11 "
+0%
+0!
+1R
+0>
+0<
+15
+0=
+0U
+0K
+0E
+0D
+1X
+#130000
+1#
+1%
+1?
+1>
+05
+1U
+1E
+1D
+#140000
+1!
+1<
+15
+1=
+1N!
+1G!
+1\!
+1F!
+1g
+1J
+1W
+0L
+0E
+1V
+1H
+0G
+02
+1m
+1f
+#150000
+0#
+0%
+0?
+0>
+05
+0U
+0g
+0J
+0H
+1G
+1E
+#160000
+b111 "
+b101 "
+b100 "
+0!
+0R
+0Z
+1[
+0<
+15
+0=
+1p
+1o
+0k
+0i
+#170000
+1#
+1?
+05
+1g
+1J
+0D
+#180000
+1!
+1<
+15
+1=
+1P!
+0O!
+0N!
+1H!
+0G!
+1I!
+1_!
+0F!
+1n
+0g
+1N
+0M
+0W
+10
+1L
+0f
+0m
+1s
+0N
+1M
+12
+0s
+#190000
+0#
+0?
+05
+#200000
+b101 "
+0!
+1R
+0<
+15
+0=
+#210000
+1#
+1?
+05
+#220000
+1!
+1<
+15
+1=
+1N!
+#230000
+0#
+0?
+05
+#240000
+b111 "
+b110 "
+0!
+0R
+1Z
+0<
+15
+0=
+1k
+1i
+#250000
+1#
+1?
+05
+#260000
+1!
+1<
+15
+1=
+1O!
+0N!
+#270000
+0#
+0?
+05
+#280000
+b111 "
+0!
+1R
+0<
+15
+0=
+#300000
+1!
+1<
+05
+1=
+1N!
+#320000
+b1111 "
+b1011 "
+b1001 "
+b1000 "
+0!
+0R
+0Z
+0[
+1\
+0<
+15
+0=
+1u
+0p
+0o
+0k
+0i
+#340000
+1!
+1<
+05
+1=
+1Q!
+0P!
+0O!
+0N!
+#360000
+b1001 "
+0!
+1R
+0<
+15
+0=
+#380000
+1!
+1<
+05
+1=
+1N!
+#400000
+b1011 "
+b1010 "
+0!
+0R
+1Z
+0<
+15
+0=
+1k
+1i
+#420000
+1!
+1<
+05
+1=
+1O!
+0N!
+#440000
+b1011 "
+0!
+1R
+0<
+15
+0=
+#460000
+1!
+1<
+05
+1=
+1N!
+#480000
+b1111 "
+b1101 "
+b1100 "
+0!
+0R
+0Z
+1[
+0<
+15
+0=
+1p
+1o
+0k
+0i
+#500000
+1!
+1<
+05
+1=
+1P!
+0O!
+0N!
+#520000
+b1101 "
+0!
+1R
+0<
+15
+0=
+#540000
+1!
+1<
+05
+1=
+1N!
+#560000
+b1111 "
+b1110 "
+0!
+0R
+1Z
+0<
+15
+0=
+1k
+1i
+#580000
+1!
+1<
+05
+1=
+1O!
+0N!
+#600000
+b1111 "
+0!
+1R
+0<
+15
+0=
+#620000
+1!
+1<
+05
+1=
+1N!
+#640000
+b11111 "
+b10111 "
+b10011 "
+b10001 "
+b10000 "
+0!
+0R
+0Z
+0[
+0\
+1]
+0<
+15
+0=
+0u
+0p
+0o
+0k
+0i
+#660000
+1!
+1<
+05
+1=
+1R!
+0Q!
+0P!
+0O!
+0N!
+#680000
+b10001 "
+0!
+1R
+0<
+15
+0=
+#700000
+1!
+1<
+05
+1=
+1N!
+#720000
+b10011 "
+b10010 "
+0!
+0R
+1Z
+0<
+15
+0=
+1k
+1i
+#740000
+1!
+1<
+05
+1=
+1O!
+0N!
+#760000
+b10011 "
+0!
+1R
+0<
+15
+0=
+#780000
+1!
+1<
+05
+1=
+1N!
+#800000
+b10111 "
+b10101 "
+b10100 "
+0!
+0R
+0Z
+1[
+0<
+15
+0=
+1p
+1o
+0k
+0i
+#820000
+1!
+1<
+05
+1=
+1P!
+0O!
+0N!
+#840000
+b10101 "
+0!
+1R
+0<
+15
+0=
+#860000
+1!
+1<
+05
+1=
+1N!
+#880000
+b10111 "
+b10110 "
+0!
+0R
+1Z
+0<
+15
+0=
+1k
+1i
+#900000
+1!
+1<
+05
+1=
+1O!
+0N!
+#920000
+b10111 "
+0!
+1R
+0<
+15
+0=
+#940000
+1!
+1<
+05
+1=
+1N!
+#960000
+b11111 "
+b11011 "
+b11001 "
+b11000 "
+0!
+0R
+0Z
+0[
+1\
+0<
+15
+0=
+1u
+0p
+0o
+0k
+0i
+#980000
+1!
+1<
+05
+1=
+1Q!
+0P!
+0O!
+0N!
+#1000000
