@@ -209,7 +209,7 @@ FGPA, oscilloscope, ADC, VGA
 \subsection{ADC} \- \indent
 		This module quantizes the analog input data. The hardware used is LTC2308 that is built into the FPGA. The Altera provides an example code regarding the use of the built-in ADC\cite{b1}. By evaluating the provided functionalities of this example with the help of a MsC project \cite{b2}, a code is written in Verilog HDL and in Qsys environment. Qsys instantiates the internal connections of embedded modules to use ADC controller. The resulting Qsys module is exported as BSF file and that is shown in \textit{Figure~\ref{fig:adc_block}}. This will be utilized as an ADC block. The code is written according to I/O ports of this block. But the ultimate ADC bus is output from "conduit\_end\_SDI" port of the ADC block. 
 		
-		\begin{figure}[t!]
+		\begin{figure}[H]
 			\setlength{\unitlength}{\textwidth}
 			\center 
 			\includegraphics[width=0.47\textwidth]{adc_block}
@@ -235,18 +235,35 @@ FGPA, oscilloscope, ADC, VGA
 		
 		
 \subsection{Computation Unit} \- \indent
-	Computation unit is the unit responsible for all kinds of mathematical calculation of the project. For instance mean value calculation for the input signal are conducted in this unit. This Unit can be considered as a brain of the project. 
+	Computation unit is the unit responsible for all kinds of mathematical calculation of the project. For instance mean value calculation for the input signal are conducted in this unit. This Unit can be considered as a brain of the project. Some important parts are as follows,	
+
+\begin{figure}[h!]
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{voltage}
+	\caption{\label{fig:waveform} Voltage Waveform and its Properties}
+\end{figure}
+
+\- \\[4cm]
 
 \paragraph{Peak-to-Peak Value Calculation}	
+\- \indent
+	To find the peak-to-peak value of the input voltage, we needed to find the maximum and minimum voltage values of the given input. For that purpose we have used a well known sorting algorithm. Initially a point on the waveform was picked and every point next to it was compared to it. If the next point on the voltage is bigger than the initially stored value, the stored value is replaced with that value. After tracing every point on the waveform, the biggest value can be found. Similarly, the lowest value on the voltage waveform can be found. 
+	
+	After finding minimum and maximum points at the voltage waveform, peak-to-peak value is the difference between these values as can be seen from the \textit{Figure~\ref{fig:waveform}}.  	
+	
 	
 \paragraph{Mean Value Calculation}
 
 
 \paragraph{DC Offset Calculation}
 
+DC offset is a mean amplitude displacement from
+
+
 \paragraph{Frequency Calculation}
 
-\vfill
+
 
 \subsection{Mode Selection (AC/DC)} \- \indent
 	AC/DC Modes are one of the most fundamental mods of digital oscilloscopes in market. In this part we will build a module to build our own selection mode. One slide switch will be assigned to retrieve the desired mode information from the user. Based on this information, screen will display the input signal either with the DC offset or without the DC offset.
@@ -259,7 +276,7 @@ FGPA, oscilloscope, ADC, VGA
 	
 
 \subsection{VGA Screen} \- \indent
-	VGA is a widely used standard in video industry for the transmission of video signals from a computer or microprocessor into a monitor or TV. Each 640x480 image is called a ‘frame’ and each frame contains 480 lines which are made up of 640 pixels. We will use a standard LCD VGA Monitor as a display for our FPGA Oscilloscope. We will build a controller module for this part called VGA Controller. The input pin configuration for the VGA Monitor can be seen at \textit{Figure~\ref{fig:vga_pins}}.
+	VGA is a widely used standard in video industry for the transmission of video signals from a computer or microprocessor into a monitor or TV. The input pin configuration for the VGA Monitor can be seen at \textit{Figure~\ref{fig:vga_pins}}. VGA provides 640x480 pixel resolution. This resolution, however, is not the total pixel in horizontal and vertical axes. There is a blank border frame surrounding the display area. The horizontal axis has 48 pixels of border width on the left and 16 pixels of border width on the right side of the screen. Additionally, there are 96 pixels of border width for ray tube the retrace through the diagonal of the screen. The vertical axis has also similar additional pixels. 10 and 33 pixels for top and bottom borders, respectively. Also 2 pixels for the vertical retrace of the ray tube. The total structure of a VGA screen can be seen in \textit{Figure~\ref{fig:vga-hsync-vsync}}. The whole screen is 800x525 pixels.
 	
 \begin{figure}[h!]
 			\setlength{\unitlength}{\textwidth}
@@ -279,13 +296,13 @@ FGPA, oscilloscope, ADC, VGA
 \begin{figure}[h!]
 	\setlength{\unitlength}{\textwidth}
 	\center 
-	\includegraphics[width=0.47\textwidth]{VGAhoztim}
-	\caption{\label{fig:VGA_hoztim}The Block Diagram of the Project}
+	\includegraphics[width=0.47\textwidth]{vga-hsync-vsync}
+	\caption{\label{fig:vga-hsync-vsync}The Block Diagram of the Project}
 \end{figure}
 
 \subsubsection{VGA Controller} \- \indent
 
-	The VGA controller combines the data drom RAM and Computation Unit to create a signal that can be displayed on the VGA monitor. Each of the RAM Modules contains an image that is ready for display on the screen. However, the data must be positioned relative to each other and combined. Also this module performs once a second as desired in the project requirements. The VGA controller also gets data from different data inputs such as Time/div and Voltage/div in order to reflect the waveform as user requires. In this part multiple clock signals and counters needed to display the waveform accordingly. Basic VGA Controller can be seen at \textit{Figure~\ref{fig:vga_controller}}\cite{b4}.
+	The VGA controller combines the data from RAM and Computation Unit to create a signal that can be displayed on the VGA monitor. Each of the RAM Modules contains an image that is ready for display on the screen. However, the data must be positioned relative to each other and combined. Also this module performs once a second as desired in the project requirements. The VGA controller also gets data from different data inputs such as Time/div and Voltage/div in order to reflect the waveform as user requires. In this part multiple clock signals and counters needed to display the waveform accordingly. Basic VGA Controller can be seen at \textit{Figure~\ref{fig:vga_controller}}\cite{b4}.
 
 \begin{figure}[h!]
 			\setlength{\unitlength}{\textwidth}
