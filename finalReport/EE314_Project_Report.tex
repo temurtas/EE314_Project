@@ -134,77 +134,59 @@ FGPA, oscilloscope, ADC, VGA
 
 
 \section{ALTERA DE1-SoC}
-\begin{figure}[h!]
+\- \indent
+	In this project, we have used ALTERA DE1$\_$SoC Development Kit for main unit and a VGA Monitor as a screen for the oscilloscope. In this part, our aim is to introduce the FPGA used in the project. The overall look of the device can be seen at \textit{Figure~\ref{fig:FPGA}}, as can be seen from the figure, the Development Kit consists of multiple parts aside from FPGA. In this project, GPIO Pins, seven segment display, push buttons, switches and VGA output of DE1-SoC was used.  
+
+\begin{figure}[H]
 	\setlength{\unitlength}{\textwidth}
 	\center 
 	\includegraphics[width=0.47\textwidth]{FPGA}
-	\caption{\label{fig:FPGA}The Block Diagram of the Project}
+	\caption{\label{fig:FPGA}ALTERA DE1$\_$SoC Development Kit}
 \end{figure}
 
-\begin{figure}[h!]
+	GPIO pins, also known as general-purpose input/output pins, were used for getting the analog input that is desired to be monitored through oscilloscope. As can be seen from the \textit{Figure~\ref{fig:GPIO}}, the basic circuitry for this pins includes Schottky diodes for protection, and a resistor.
+	
+\begin{figure}[H]
 	\setlength{\unitlength}{\textwidth}
 	\center 
-	\includegraphics[width=0.47\textwidth]{GPIO_pins}
-	\caption{\label{fig:GPIO_pins}The Block Diagram of the Project}
+	\includegraphics[width=0.47\textwidth]{GPIOpins}
+	\caption{\label{fig:GPIO}GPIO Pins}
 \end{figure}
 
-\begin{figure}[h!]
-	\setlength{\unitlength}{\textwidth}
-	\center 
-	\includegraphics[width=0.47\textwidth]{LEDs}
-	\caption{\label{fig:LEDs}The Block Diagram of the Project}
-\end{figure}
+	Seven segment display was used for testing the output values of computation value without using external monitor that we had some difficulties to find. As can be seen from the \textit{Figure~\ref{fig:SSD}}, every led on the seven segment is connected through a resistor to the FPGA.
 
-\begin{figure}[h!]
-	\setlength{\unitlength}{\textwidth}
-	\center 
-	\includegraphics[width=0.47\textwidth]{RAM_state}
-	\caption{\label{fig:RAM_state}The Block Diagram of the Project}
-\end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\setlength{\unitlength}{\textwidth}
 	\center 
 	\includegraphics[width=0.47\textwidth]{SSD}
-	\caption{\label{fig:SSD}The Block Diagram of the Project}
+	\caption{\label{fig:SSD} Seven Segment Display}
+\end{figure}
+
+	Finally, the switch buttons were used as a mode buttons of the oscilloscope and push buttons were used as a division changer for the oscilloscope. The connections to FPGA can be seen at \textit{Figure~\ref{fig:pushbuttons}} and \textit{Figure~\ref{fig:switchbuttons}}. Finally the VGA connection used will be explained later in the report. 
+
+\begin{figure}[h!]
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{pushbuttons}
+	\caption{\label{fig:pushbuttons} Push Buttons}
 \end{figure}
 
 
 \begin{figure}[h!]
 	\setlength{\unitlength}{\textwidth}
 	\center 
-	\includegraphics[width=0.47\textwidth]{VGA_config}
-	\caption{\label{fig:VGA_config}The Block Diagram of the Project}
-\end{figure}
-
-\begin{figure}[h!]
-	\setlength{\unitlength}{\textwidth}
-	\center 
-	\includegraphics[width=0.47\textwidth]{VGA_hoztim}
-	\caption{\label{fig:VGA_hoztim}The Block Diagram of the Project}
-\end{figure}
-
-\begin{figure}[h!]
-	\setlength{\unitlength}{\textwidth}
-	\center 
-	\includegraphics[width=0.47\textwidth]{push_buttons}
-	\caption{\label{fig:push_buttons}The Block Diagram of the Project}
-\end{figure}
-
-
-\begin{figure}[h!]
-	\setlength{\unitlength}{\textwidth}
-	\center 
-	\includegraphics[width=0.47\textwidth]{switch_buttons}
-	\caption{\label{fig:switch_buttons}The Block Diagram of the Project}
+	\includegraphics[width=0.47\textwidth]{switchbuttons}
+	\caption{\label{fig:switchbuttons} Switch Buttons}
 \end{figure}
 
 
 
-
+\-\\[1cm]
 
 \section{Modules}
-The modules and functional blocks designed and used in the project are presented in this section.
+\- \indent
+	The modules and functional blocks designed and used in the project are presented in this section.
 %\begin{figure}[h!]
 %	\centering
 %	\begin{subfigure}{.48\textwidth}
@@ -273,8 +255,23 @@ The modules and functional blocks designed and used in the project are presented
 \begin{figure}[h!]
 			\setlength{\unitlength}{\textwidth}
 			\center 
-			\includegraphics[width=0.47\textwidth]{vga_pins}
+			\includegraphics[width=0.47\textwidth]{vgapins}
 			\caption{\label{fig:vga_pins} VGA Input Pins}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{VGAconfig}
+	\caption{\label{fig:VGA_config}The Block Diagram of the Project}
+\end{figure}
+
+\begin{figure}[h!]
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{VGAhoztim}
+	\caption{\label{fig:VGA_hoztim}The Block Diagram of the Project}
 \end{figure}
 
 \subsubsection{VGA Controller} \- \indent
@@ -284,7 +281,7 @@ The modules and functional blocks designed and used in the project are presented
 \begin{figure}[h!]
 			\setlength{\unitlength}{\textwidth}
 			\center 
-			\includegraphics[width=0.47\textwidth]{vga_controller}
+			\includegraphics[width=0.47\textwidth]{vgacontroller}
 			\caption{\label{fig:vga_controller} VGA Controller}
 \end{figure}
 		
