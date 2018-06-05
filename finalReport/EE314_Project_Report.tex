@@ -207,7 +207,9 @@ FGPA, oscilloscope, ADC, VGA
 %\end{figure}
 
 \subsection{ADC} \- \indent
-		This module quantizes the analog input data. The hardware used is LTC2308 that is built into the FPGA. The Altera provides an example code regarding the use of the built-in ADC\cite{b1}. By evaluating the provided functionalities of this example with the help of a MsC project \cite{b2}, a code is written in Verilog HDL and in Qsys environment. Qsys instantiates the internal connections of embedded modules to use ADC controller. The resulting Qsys module is exported as BSF file and that is shown in \textit{Figure~\ref{fig:adc_block}}. This will be utilized as an ADC block. The code is written according to I/O ports of this block. But the ultimate ADC bus is output from "conduit\_end\_SDI" port of the ADC block. 
+		This module quantizes the analog input data. The hardware used is LTC2308 that is built into the FPGA. The Altera provides an example code regarding the use of the built-in ADC\cite{b1}. By evaluating the provided functionalities of this example with the help of a MsC project \cite{b2}, a code is written in Verilog HDL and in Qsys environment. Qsys instantiates the internal connections of embedded modules to use ADC controller. The resulting Qsys module is exported as BSF file and that is shown in \textit{Figure~\ref{fig:adc_block}}.
+		
+		This module couldn't be used in the project since the VGA screen wasn't driven. It wasn't possible to test the output of the ADC module. Also, integration of the module with the rest of the project couldn't be done.
 		
 		\begin{figure}[H]
 			\setlength{\unitlength}{\textwidth}
@@ -217,7 +219,9 @@ FGPA, oscilloscope, ADC, VGA
 		\end{figure}
 
 \subsection{RAM} \- \indent
-	The main function of RAM is to introduce a block to the system that can be both writable and readable. Writing is necessary to save data coming from ADC and reading is also necessary to process the data and show them on VGA screen. The RAM should work with FIFO structure to realize proper operation on VGA screen. "A FIFO (first-in-first-out) buffer is an "elastic" storage between two subsystems."\cite{b3}. A FIFO based read and write operation is depicted in \textit{Figure~\ref{fig:fifo_diagram}}. The RAM is designed in behaviour level however, yet not implemented. Possible state diagram for the RAM Module can be seen at \textit{Figure~\ref{fig:RAM State}}.
+	The main function of RAM is to introduce a block to the system that can be both writable and readable. Writing is necessary to save data coming from ADC and reading is also necessary to process the data and show them on VGA screen. The RAM should work with FIFO structure to realize proper operation on VGA screen. "A FIFO (first-in-first-out) buffer is an "elastic" storage between two subsystems."\cite{b3}. A FIFO based read and write operation is depicted in \textit{Figure~\ref{fig:fifo_diagram}}. The FIFO is designed and written, the resulting circuit block is shown in \textit{Figure~\ref{fig:fifo_diagram}}. The implemented FIFO has 8 bits of stack height and 12 bits of stack width. It also indicates when stacks are half-filled or full-filled.
+	
+	In the demo, this module wasn't shown due to incompleteness of the rest of the project, even though FIFO was working properly.
 	
 	\begin{figure}[t!]
 		\setlength{\unitlength}{\textwidth}
@@ -231,6 +235,13 @@ FGPA, oscilloscope, ADC, VGA
 			\center 
 			\includegraphics[width=0.47\textwidth]{RAM_state}
 			\caption{\label{fig:RAM State} State Diagram for RAM}
+\end{figure}
+
+\begin{figure}[h!]
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{fifo_ports}
+	\caption{\label{fig:fifo_ports} FIFO Block}
 \end{figure}
 		
 		
@@ -246,22 +257,22 @@ FGPA, oscilloscope, ADC, VGA
 
 \- \\[4cm]
 
-\paragraph{Peak-to-Peak Value Calculation}	
+\subsection{Calculation of Peak-to-Peak Value }	
 \- \indent
 	To find the peak-to-peak value of the input voltage, we needed to find the maximum and minimum voltage values of the given input. For that purpose we have used a well known sorting algorithm. Initially a point on the waveform was picked and every point next to it was compared to it. If the next point on the voltage is bigger than the initially stored value, the stored value is replaced with that value. After tracing every point on the waveform, the biggest value can be found. Similarly, the lowest value on the voltage waveform can be found. 
 	
 	After finding minimum and maximum points at the voltage waveform, peak-to-peak value is the difference between these values as can be seen from the \textit{Figure~\ref{fig:waveform}}.  	
 	
 	
-\paragraph{Mean Value Calculation}
+\subsection{Calculation of Mean Value}
 
 
-\paragraph{DC Offset Calculation}
+\subsection{Calculation of DC Offset}
 
 DC offset is a mean amplitude displacement from
 
 
-\paragraph{Frequency Calculation}
+\subsection{Calculation of Frequency}
 
 
 
@@ -276,13 +287,13 @@ DC offset is a mean amplitude displacement from
 	
 
 \subsection{VGA Screen} \- \indent
-	VGA is a widely used standard in video industry for the transmission of video signals from a computer or microprocessor into a monitor or TV. Each 640x480 image is called a ‘frame’ and each frame contains 480 lines which are made up of 640 pixels. We will use a standard LCD VGA Monitor as a display for our FPGA Oscilloscope. We will build a controller module for this part called VGA Controller. The input pin configuration for the VGA Monitor can be seen at \textit{Figure~\ref{fig:vga_pins}}.
-	
+VGA is a widely used standard in video industry for the transmission of video signals from a computer or microprocessor into a monitor or TV. The input pin configuration for the VGA Monitor can be seen at \textit{Figure~\ref{fig:vga_pins}}. VGA provides 640x480 pixel resolution. This resolution, however, is not the total pixel in horizontal and vertical axes. There is a blank border frame surrounding the display area. The horizontal axis has 48 pixels of border width on the left and 16 pixels of border width on the right side of the screen. Additionally, there are 96 pixels of border width for ray tube the retrace through the diagonal of the screen. The vertical axis has also similar additional pixels. 10 and 33 pixels for top and bottom borders, respectively. Also 2 pixels for the vertical retrace of the ray tube. The total structure of a VGA screen can be seen in \textit{Figure~\ref{fig:vga-hsync-vsync}}. The whole screen is 800x525 pixels.
+
 \begin{figure}[h!]
-			\setlength{\unitlength}{\textwidth}
-			\center 
-			\includegraphics[width=0.47\textwidth]{vgapins}
-			\caption{\label{fig:vga_pins} VGA Input Pins}
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{vgapins}
+	\caption{\label{fig:vga_pins} VGA Input Pins}
 \end{figure}
 
 
@@ -296,39 +307,31 @@ DC offset is a mean amplitude displacement from
 \begin{figure}[h!]
 	\setlength{\unitlength}{\textwidth}
 	\center 
-	\includegraphics[width=0.47\textwidth]{VGAhoztim}
-	\caption{\label{fig:VGA_hoztim}The Block Diagram of the Project}
+	\includegraphics[width=0.47\textwidth]{vga-hsync-vsync}
+	\caption{\label{fig:vga-hsync-vsync}A Frame of VGA Screen with Control Signals}
 \end{figure}
 
 \subsubsection{VGA Controller} \- \indent
 
-	The VGA controller combines the data drom RAM and Computation Unit to create a signal that can be displayed on the VGA monitor. Each of the RAM Modules contains an image that is ready for display on the screen. However, the data must be positioned relative to each other and combined. Also this module performs once a second as desired in the project requirements. The VGA controller also gets data from different data inputs such as Time/div and Voltage/div in order to reflect the waveform as user requires. In this part multiple clock signals and counters needed to display the waveform accordingly. Basic VGA Controller can be seen at \textit{Figure~\ref{fig:vga_controller}}\cite{b4}.
+The VGA controller administrates the digitally stored input signal and the measured properties of the signal to display them on the screen. The two counters in this module, named "h\_count" and "v\_count" are to keep track of the vertical and horizontal pixels. Also there are two more counters to synchronize the display area, blank are and the retrace area of the screen. These counters are "h\_sync" and "v\_sync" and they are the output signals of PINs 13 and 14 of VGA output with an active low behaviour. Lastly, "o\_red", "o\_blue" and "o\_green" are the 8-bit output bus signals determine the color of the respective pixel by mapping them on 255,255,255 color scale. The resulting diagram showing the signals of the VGA Controller is shown in  \textit{Figure~\ref{fig:vgacontroller}} \cite{b4}.
+
+The waveform, frequency, peak-to-peak voltages of the signals are dynamic measurements, while texts indicating them are not. For this reason, with the reference of \cite{b2}, static images can be shown in ".MIF" formats for simplicity. These images are first saved as ".BMP" then converted to ".MIF" and stored in a simple ROM structure.
+
+The codes are written alongside with the aforementioned ideas, however, the display on the VGA screen could not be achieved. 
+
+combines the data from RAM and Computation Unit to create a signal that can be displayed on the VGA monitor. Each of the RAM Modules contains an image that is ready for display on the screen. However, the data must be positioned relative to each other and combined. Also this module performs once a second as desired in the project requirements. The VGA controller also gets data from different data inputs such as Time/div and Voltage/div in order to reflect the waveform as user requires. In this part multiple clock signals and counters needed to display the waveform accordingly. Basic VGA Controller can be seen at \textit{Figure~\ref{fig:vga_controller}}.
 
 \begin{figure}[h!]
-			\setlength{\unitlength}{\textwidth}
-			\center 
-			\includegraphics[width=0.47\textwidth]{vgacontroller}
-			\caption{\label{fig:vga_controller} VGA Controller}
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{vgacontroller}
+	\caption{\label{fig:vgacontroller} Internal Structure of the VGA Controller}
 \end{figure}
-		
-			
-	This module will supply an input data for the VGA controller for user preferences. Two push buttons will be assigned for the Time/div inputs that can be considered as Time+/div and Time-/div. As user pushes to Time+/div button, the time scale will be larger than the previous value. Similarly, as the user pushes to Time-/div button, the time scale will be smaller than the previous value. According to user preferences, this module allows user to see wider or narrower parts of input waveform.
-
-\vfill	 
-	  
-\subsubsection{Voltage/div Input} \- \indent
-
-	This module will supply an input data for the VGA controller for user preferences. Two push buttons will be assigned for the Voltage/div inputs that can be considered as Voltage+/div and Voltage-/div. As user pushes to Voltage+/div button, the voltage scale will be larger than the previous value. Similarly, as the user pushes to Voltage-/div button, the voltage scale will be smaller than the previous value. According to user preferences, this module allows user to fit the voltage waveform to the screen.
-	
-\subsubsection{Autoscale Input} \- \indent
-
-	This module will also supply an input data for the VGA controller for user preferences. Since we are planning to use all push buttons for other modules. One slide switch will be assigned to this module. As the user triggers the button, this module will scale the waveform for the display such that it fits the display best.
-
 	
 	
 \section{Conclusion}
 \- \indent
-	In this project, our aim is to design a FPGA based digital oscilloscope using Verilog. The project consists of five main part that are Analog to Digital Converter (VGA), RAM, Computation Unit, Mode Selection for Display and VGA Screen. Overall diagram of the project can be seen at \textit{Figure~\ref{fig:overall_diagram}}. 
+	In this project, the aim was to design a FPGA based digital oscilloscope using Verilog. The project consisted of four main part that are Analog to Digital Converter, RAM, Computation Unit and VGA Screen. Overall diagram of the project can be seen at \textit{Figure~\ref{fig:overall_diagram}}. None of the parts were implemented properly. This is due to lack of knowledge in Verilog, RAM structure, internal flow of data in FPGA and computer structure. It would be better to implement some parts of the project as the project but the project itself was too complex to build for us. The importance of Verilog is understood very well.
 	
 	
 
