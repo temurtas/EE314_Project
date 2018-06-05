@@ -1,28 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.28)  5 JUN 2018 19:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.28)  5 JUN 2018 19:22
 entering extended mode
 **./EE314_Project_Report.tex
 (EE314_Project_Report.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 w
-     3\documentclass[paper]{IEEEtran}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no w in font nullfont!
-Missing character: There is no 3 in font nullfont!
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ieeetran\IEEEtran.cls"
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--201
-[] 
- []
-
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -126,7 +108,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEquantizemultiple=\count92
 \@IEEEquantizeboxA=\box26
 \@IEEEtmpitemindent=\dimen124
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
@@ -1035,13 +1016,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 ** WARNING: \and is valid only when in conference or peerreviewca
 modes (line 112).
-<overall_diagram.png, id=9, 323.2075pt x 288.07625pt>
+<overall_diagram.png, id=4, 323.2075pt x 288.07625pt>
 File: overall_diagram.png Graphic file (type png)
 
 <use overall_diagram.png>
 Package pdftex.def Info: overall_diagram.png used on input line 131.
 (pdftex.def)             Requested size: 242.52063pt x 216.15775pt.
- <FPGA.png, id=11, 943.27406pt x 651.18282pt>
+ <FPGA.png, id=6, 943.27406pt x 651.18282pt>
 File: FPGA.png Graphic file (type png)
 
 <use FPGA.png>
@@ -1051,7 +1032,7 @@ Package pdftex.def Info: FPGA.png used on input line 140.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<GPIO_pins.png, id=12, 702.37407pt x 436.63126pt>
+<GPIO_pins.png, id=7, 702.37407pt x 436.63126pt>
 File: GPIO_pins.png Graphic file (type png)
  <use GPIO_pins.png>
 Package pdftex.def Info: GPIO_pins.png used on input line 147.
@@ -1060,7 +1041,7 @@ Package pdftex.def Info: GPIO_pins.png used on input line 147.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<LEDs.png, id=13, 643.6547pt x 385.44pt>
+<LEDs.png, id=8, 643.6547pt x 385.44pt>
 File: LEDs.png Graphic file (type png)
  <use LEDs.png>
 Package pdftex.def Info: LEDs.png used on input line 154.
@@ -1069,7 +1050,7 @@ Package pdftex.def Info: LEDs.png used on input line 154.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<RAM_state.png, id=14, 298.86656pt x 310.15875pt>
+<RAM_state.png, id=9, 298.86656pt x 310.15875pt>
 File: RAM_state.png Graphic file (type png)
  <use RAM_state.png>
 Package pdftex.def Info: RAM_state.png used on input line 161.
@@ -1078,7 +1059,7 @@ Package pdftex.def Info: RAM_state.png used on input line 161.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<SSD.png, id=15, 637.63219pt x 319.1925pt>
+<SSD.png, id=10, 637.63219pt x 319.1925pt>
 File: SSD.png Graphic file (type png)
  <use SSD.png>
 Package pdftex.def Info: SSD.png used on input line 168.
@@ -1087,7 +1068,7 @@ Package pdftex.def Info: SSD.png used on input line 168.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<VGA_config.png, id=16, 1009.52156pt x 502.87875pt>
+<VGA_config.png, id=11, 1009.52156pt x 502.87875pt>
 File: VGA_config.png Graphic file (type png)
  <use VGA_config.png>
 Package pdftex.def Info: VGA_config.png used on input line 176.
@@ -1096,7 +1077,7 @@ Package pdftex.def Info: VGA_config.png used on input line 176.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<VGA_hoztim.png, id=17, 1105.88156pt x 452.4403pt>
+<VGA_hoztim.png, id=12, 1105.88156pt x 452.4403pt>
 File: VGA_hoztim.png Graphic file (type png)
  <use VGA_hoztim.png>
 Package pdftex.def Info: VGA_hoztim.png used on input line 183.
@@ -1105,7 +1086,7 @@ Package pdftex.def Info: VGA_hoztim.png used on input line 183.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<push_buttons.png, id=18, 1116.42094pt x 593.96906pt>
+<push_buttons.png, id=13, 1116.42094pt x 593.96906pt>
 File: push_buttons.png Graphic file (type png)
  <use push_buttons.png>
 Package pdftex.def Info: push_buttons.png used on input line 190.
@@ -1114,7 +1095,7 @@ Package pdftex.def Info: push_buttons.png used on input line 190.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<switch_buttons.png, id=19, 608.2725pt x 509.65407pt>
+<switch_buttons.png, id=14, 608.2725pt x 509.65407pt>
 File: switch_buttons.png Graphic file (type png)
  <use switch_buttons.png>
 Package pdftex.def Info: switch_buttons.png used on input line 198.
@@ -1123,7 +1104,7 @@ Package pdftex.def Info: switch_buttons.png used on input line 198.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<adc_block.jpg, id=20, 678.1335pt x 308.95425pt>
+<adc_block.jpg, id=15, 678.1335pt x 308.95425pt>
 File: adc_block.jpg Graphic file (type jpg)
  <use adc_block.jpg>
 Package pdftex.def Info: adc_block.jpg used on input line 233.
@@ -1131,16 +1112,16 @@ Package pdftex.def Info: adc_block.jpg used on input line 233.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
  <./overall_diagram.png> <./FPGA.png> <./GPIO_pins.png>]
 
-LaTeX Warning: Text page 3 contains only floats.
+LaTeX Warning: Text page 2 contains only floats.
 
-[3 <./LEDs.png> <./RAM_state.png> <./SSD.png> <./VGA_config.png> <./VGA_hoztim.
+[2 <./LEDs.png> <./RAM_state.png> <./SSD.png> <./VGA_config.png> <./VGA_hoztim.
 png> <./push_buttons.png> <./switch_buttons.png>]
-<fifo_diagram.jpg, id=40, 622.7265pt x 471.56175pt>
+<fifo_diagram.jpg, id=37, 622.7265pt x 471.56175pt>
 File: fifo_diagram.jpg Graphic file (type jpg)
  <use fifo_diagram.jpg>
 Package pdftex.def Info: fifo_diagram.jpg used on input line 243.
@@ -1157,13 +1138,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-<vga_pins.png, id=41, 1236.87094pt x 380.92313pt>
+<vga_pins.png, id=38, 1236.87094pt x 380.92313pt>
 File: vga_pins.png Graphic file (type png)
  <use vga_pins.png>
 Package pdftex.def Info: vga_pins.png used on input line 276.
 (pdftex.def)             Requested size: 242.52063pt x 74.68948pt.
- [4 <./adc_block.jpg> <./fifo_diagram.jpg> <./vga_pins.png>]
-<vga_controller.png, id=46, 1023.825pt x 459.96844pt>
+ [3 <./adc_block.jpg> <./fifo_diagram.jpg> <./vga_pins.png>]
+<vga_controller.png, id=43, 1023.825pt x 459.96844pt>
 File: vga_controller.png Graphic file (type png)
  <use vga_controller.png>
 Package pdftex.def Info: vga_controller.png used on input line 287.
@@ -1195,23 +1176,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 317--320
 []\OT1/ptm/m/n/8 "VGA Dis-play Con-troller" [On-line]. Avaible :
  []
 
-[5 <./vga_controller.png>] (EE314_Project_Report.aux) ) 
+[4 <./vga_controller.png>] (EE314_Project_Report.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  26213 strings out of 493323
  508409 string characters out of 3139066
- 589164 words of memory out of 3000000
+ 589174 words of memory out of 3000000
  29351 multiletter control sequences out of 15000+200000
  567185 words of font info for 89 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,7n,94p,10374b,366s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX
- 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/t
-imes/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EE314_Project_Report.pdf (5 pages, 3388365 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
+KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
+mr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on EE314_Project_Report.pdf (4 pages, 3387985 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
