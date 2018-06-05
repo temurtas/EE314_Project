@@ -209,7 +209,7 @@ FGPA, oscilloscope, ADC, VGA
 \subsection{ADC} \- \indent
 		This module quantizes the analog input data. The hardware used is LTC2308 that is built into the FPGA. The Altera provides an example code regarding the use of the built-in ADC\cite{b1}. By evaluating the provided functionalities of this example with the help of a MsC project \cite{b2}, a code is written in Verilog HDL and in Qsys environment. Qsys instantiates the internal connections of embedded modules to use ADC controller. The resulting Qsys module is exported as BSF file and that is shown in \textit{Figure~\ref{fig:adc_block}}. This will be utilized as an ADC block. The code is written according to I/O ports of this block. But the ultimate ADC bus is output from "conduit\_end\_SDI" port of the ADC block. 
 		
-		\begin{figure}[t!]
+		\begin{figure}[H]
 			\setlength{\unitlength}{\textwidth}
 			\center 
 			\includegraphics[width=0.47\textwidth]{adc_block}
@@ -235,18 +235,35 @@ FGPA, oscilloscope, ADC, VGA
 		
 		
 \subsection{Computation Unit} \- \indent
-	Computation unit is the unit responsible for all kinds of mathematical calculation of the project. For instance mean value calculation for the input signal are conducted in this unit. This Unit can be considered as a brain of the project. 
+	Computation unit is the unit responsible for all kinds of mathematical calculation of the project. For instance mean value calculation for the input signal are conducted in this unit. This Unit can be considered as a brain of the project. Some important parts are as follows,	
+
+\begin{figure}[h!]
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{voltage}
+	\caption{\label{fig:waveform} Voltage Waveform and its Properties}
+\end{figure}
+
+\- \\[4cm]
 
 \paragraph{Peak-to-Peak Value Calculation}	
+\- \indent
+	To find the peak-to-peak value of the input voltage, we needed to find the maximum and minimum voltage values of the given input. For that purpose we have used a well known sorting algorithm. Initially a point on the waveform was picked and every point next to it was compared to it. If the next point on the voltage is bigger than the initially stored value, the stored value is replaced with that value. After tracing every point on the waveform, the biggest value can be found. Similarly, the lowest value on the voltage waveform can be found. 
+	
+	After finding minimum and maximum points at the voltage waveform, peak-to-peak value is the difference between these values as can be seen from the \textit{Figure~\ref{fig:waveform}}.  	
+	
 	
 \paragraph{Mean Value Calculation}
 
 
 \paragraph{DC Offset Calculation}
 
+DC offset is a mean amplitude displacement from
+
+
 \paragraph{Frequency Calculation}
 
-\vfill
+
 
 \subsection{Mode Selection (AC/DC)} \- \indent
 	AC/DC Modes are one of the most fundamental mods of digital oscilloscopes in market. In this part we will build a module to build our own selection mode. One slide switch will be assigned to retrieve the desired mode information from the user. Based on this information, screen will display the input signal either with the DC offset or without the DC offset.
