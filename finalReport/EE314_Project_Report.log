@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.28)  6 JUN 2018 21:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.28)  6 JUN 2018 21:51
 entering extended mode
 **./EE314_Project_Report.tex
 (EE314_Project_Report.tex
@@ -1094,122 +1094,140 @@ Package pdftex.def Info: fifo_ports.jpg used on input line 245.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2 <./SSD.png> <./pushbuttons.png> <./switchbuttons.png> <./adc_block.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
-
- []
-
 <voltage.png, id=32, 370.38374pt x 200.75pt>
 File: voltage.png Graphic file (type png)
  <use voltage.png>
 Package pdftex.def Info: voltage.png used on input line 258.
 (pdftex.def)             Requested size: 242.52063pt x 131.44778pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<voltage2.jpg, id=33, 456.68489pt x 347.51106pt>
+<peakstate.png, id=33, 456.95718pt x 259.7203pt>
+File: peakstate.png Graphic file (type png)
+ <use peakstate.png>
+Package pdftex.def Info: peakstate.png used on input line 274.
+(pdftex.def)             Requested size: 242.52063pt x 137.84132pt.
+ [3 <./fifo_diagram.jpg> <./RAM_state.png> <./fifo_ports.jpg> <./voltage.png> <
+./peakstate.png>] <voltage2.jpg, id=38, 456.68489pt x 347.51106pt>
 File: voltage2.jpg Graphic file (type jpg)
  <use voltage2.jpg>
-Package pdftex.def Info: voltage2.jpg used on input line 292.
+Package pdftex.def Info: voltage2.jpg used on input line 300.
 (pdftex.def)             Requested size: 242.52063pt x 184.54585pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
-[3 <./fifo_diagram.jpg> <./RAM_state.png> <./fifo_ports.jpg> <./voltage.png>]
-<vgapins.png, id=43, 1236.87094pt x 380.92313pt>
+<voltsin2.jpg, id=39, 309.40594pt x 134.75343pt>
+File: voltsin2.jpg Graphic file (type jpg)
+ <use voltsin2.jpg>
+Package pdftex.def Info: voltsin2.jpg used on input line 332.
+(pdftex.def)             Requested size: 242.52063pt x 105.62746pt.
+
+<acdc.png, id=40, 418.56375pt x 242.40562pt>
+File: acdc.png Graphic file (type png)
+ <use acdc.png>
+Package pdftex.def Info: acdc.png used on input line 345.
+(pdftex.def)             Requested size: 242.52063pt x 140.4511pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
+
+ []
+
+[4 <./voltage2.jpg> <./voltsin2.jpg> <./acdc.png>]
+<vgapins.png, id=49, 1236.87094pt x 380.92313pt>
 File: vgapins.png Graphic file (type png)
  <use vgapins.png>
-Package pdftex.def Info: vgapins.png used on input line 323.
+Package pdftex.def Info: vgapins.png used on input line 364.
 (pdftex.def)             Requested size: 242.52063pt x 74.68948pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<VGAconfig.png, id=44, 1009.52156pt x 502.87875pt>
+<VGAconfig.png, id=50, 1009.52156pt x 502.87875pt>
 File: VGAconfig.png Graphic file (type png)
  <use VGAconfig.png>
-Package pdftex.def Info: VGAconfig.png used on input line 331.
+Package pdftex.def Info: VGAconfig.png used on input line 372.
 (pdftex.def)             Requested size: 242.52063pt x 120.80846pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<vga-hsync-vsync.jpg, id=45, 501.67426pt x 358.33875pt>
+<vga-hsync-vsync.jpg, id=51, 501.67426pt x 358.33875pt>
 File: vga-hsync-vsync.jpg Graphic file (type jpg)
 
 <use vga-hsync-vsync.jpg>
-Package pdftex.def Info: vga-hsync-vsync.jpg used on input line 338.
+Package pdftex.def Info: vga-hsync-vsync.jpg used on input line 379.
 (pdftex.def)             Requested size: 242.52063pt x 173.22543pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4 <./voltage2.jpg> <./vgapins.png> <./VGAconfig.png> <./vga-hsync-vsync.jpg>]
-<vgacontroller.png, id=51, 1023.825pt x 459.96844pt>
+ <vgacontroller.png, id=52, 1023.825pt x 459.96844pt>
 File: vgacontroller.png Graphic file (type png)
- <use vgacontroller.png>
-Package pdftex.def Info: vgacontroller.png used on input line 355.
+
+<use vgacontroller.png>
+Package pdftex.def Info: vgacontroller.png used on input line 396.
 (pdftex.def)             Requested size: 242.52063pt x 108.95587pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
+
+ []
+
+
+Underfull \vbox (badness 3568) has occurred while \output is active []
+
+ [5 <./vgapins.png> <./VGAconfig.png> <./vga-hsync-vsync.jpg> <./vgacontroller.
+png>]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 []\OT1/ptm/m/n/8 \De1-Soc CD." [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 \OT1/ptm/m/n/8 http://download.terasic.com/downloads/cd-rom/de1-soc/DE1-
  []
 
 
-Overfull \hbox (13.74916pt too wide) in paragraph at lines 368--369
+Overfull \hbox (13.74916pt too wide) in paragraph at lines 411--412
 \OT1/ptm/m/n/8 https://people.ece.cornell.edu/land/courses/eceprojectsland/STUD
 ENTPROJ/ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
 \OT1/ptm/m/n/8 2015to2016/hj424/hj424[]report[]201605191237.pdf. [Ac-cessed: 21
 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--374
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 []\OT1/ptm/m/n/8 "VGA Dis-play Con-troller" [On-line]. Avaible :
  []
 
-[5
 
- <./vgacontroller.png>] (EE314_Project_Report.aux) ) 
+Overfull \hbox (20.38896pt too wide) in paragraph at lines 416--417
+[]\OT1/ptm/m/n/8 [Online]. Avaible : http://images.slideplayer.com/19/5725931/s
+lides/slide[]2.jpg 
+ []
+
+[6
+
+] (EE314_Project_Report.aux) ) 
 Here is how much of TeX's memory you used:
- 26233 strings out of 493323
- 508708 string characters out of 3139066
+ 26253 strings out of 493323
+ 508977 string characters out of 3139066
  590174 words of memory out of 3000000
- 29369 multiletter control sequences out of 15000+200000
+ 29386 multiletter control sequences out of 15000+200000
  568884 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,9n,94p,10374b,381s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.
-9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/t
-imes/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EE314_Project_Report.pdf (5 pages, 3309733 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base
+/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/u
+tmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on EE314_Project_Report.pdf (6 pages, 3361645 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 91 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 108 words of extra memory for PDF output out of 10000 (max. 10000000)
 

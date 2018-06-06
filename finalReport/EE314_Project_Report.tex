@@ -250,7 +250,7 @@ FGPA, oscilloscope, ADC, VGA
 \subsection{Computation Unit} \- \indent
 	Computation unit is the unit responsible for all kinds of mathematical calculation of the project. For instance mean value calculation for the input signal are conducted in this unit. This Unit can be considered as a brain of the project. Some important parts are as follows,	
 
-\- \\
+
 
 \begin{figure}[h!]
 	\setlength{\unitlength}{\textwidth}
@@ -263,16 +263,24 @@ FGPA, oscilloscope, ADC, VGA
 
 \subsubsection{Calculation of Peak-to-Peak Value }	
 \- \indent
+	
 	To find the peak-to-peak value of the input voltage, we needed to find the maximum and minimum voltage values of the given input. For that purpose we have used a well known sorting algorithm. Initially a point on the waveform was picked and every point next to it was compared to it. If the next point on the voltage is bigger than the initially stored value, the stored value is replaced with that value. After tracing every point on the waveform, the biggest value can be found. Similarly, the lowest value on the voltage waveform can be found. 
 	
-	After finding minimum and maximum points at the voltage waveform, peak-to-peak value is the difference between these values as can be seen from the \textit{Figure~\ref{fig:waveform}}.  	
+	After finding minimum and maximum points at the voltage waveform, peak-to-peak value is the difference between these values as can be seen from the \textit{Figure~\ref{fig:waveform}}. Basic state diagram for this module can be seen at \textit{Figure~\ref{fig:peakstate}}. "0" refers the situation that the next bit compared is not bigger than the already stored value. "1"	 refers the opposite situation.
 	
-\-\\
+	\begin{figure}[h!]
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{peakstate}
+	\caption{\label{fig:peakstate} State Transition Diagram for Peak-to-Peak Calculator}
+\end{figure}
+
+
 	
 \subsubsection{Calculation of Mean Value}
 \- \indent
 
-	Mean value calculation is another essential part of the project since the requirements states that the voltage waveform needed to start from the mean value of the waveform. It should also be noted that mean value of the voltage waveform can sometimes be confused with the rms value of the same voltage waveform. However, assuming a sinusoidal voltage waveform as in \textit{Figure~\ref{fig:sinvolt}} the mean or average value of the voltage waveform can be calculated easily as follows:
+	Mean value calculation is another essential part of the project since the requirements states that the voltage waveform needed to start from the mean value of the waveform. It should also be noted that mean value of the voltage waveform can sometimes be confused with the rms value of the same voltage waveform. However, since we deal with only the symmetrical waveforms as an input, the calculation is rather easy and do not include complex calculations like integration over some period. Assuming a symmetrical sinusoidal voltage waveform as in \textit{Figure~\ref{fig:sinvolt}} the mean or average value of the voltage waveform can be calculated easily as follows:
 	
 	$$	v(t)~=~A+Bsin(2 \pi ft)	$$	
 	
@@ -290,22 +298,55 @@ FGPA, oscilloscope, ADC, VGA
 	\setlength{\unitlength}{\textwidth}
 	\center 
 	\includegraphics[width=0.47\textwidth]{voltage2}
-	\caption{\label{fig:sinvolt} A sinusoidal Voltage Wave}
+	\caption{\label{fig:sinvolt} A Sinusoidal Voltage Wave\cite{b5}}
 \end{figure}
 
-\- \\
 
 \subsubsection{Calculation of DC Offset}
+\- \indent
 
-	DC offset value can be summarized as a mean amplitude displacement from the ground level.
+	DC offset value can be summarized as a mean amplitude displacement from the ground level. Assuming that we knew the ground level and calculated the mean value of the voltage, we could simply find the DC Offset Value that is equal to the mean value of the voltage.
+	
+	For example, for the voltage waveform at \textit{Figure~\ref{fig:sinvolt}}, the $A~Volts$ is also the DC Offset of the voltage waveform.  
 
+	The same methodology can be applied for the square and triangular waves also.
+	
+\-\\
 
 \subsubsection{Calculation of Frequency}
+\- \indent
+	
+	Measuring the frequency information of the voltage waveform is one of the most important functions of the digital oscilloscopes in the market. Since the project was all about building oscilloscope, it would be meaningless not to put frequency information on the screen. For that purpose, we have used the mean value information that we have calculated in the computation unit. Tracing the waveform from the first intersection of the Mean Value level and the waveform itself, the second intersection gives an information about half period and the third information gives an information about the full period.
+	
+	Considering another sinusoidal waveform at \textit{Figure~\ref{fig:voltsin2}} and assuming that the first intersection occurs at the origin. The frequency information can be found as follows.
+	
+	$$	Y-0~=~Y~is~equal~to~the~period~T	$$
+		
+	$$	frequency~=f~=\frac{1}{T}~=~\frac{1}{Y}~~Hz	$$
+
+	The same methodology can be applied for the square and triangular waves also.
+	
+\begin{figure}[h!]
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{voltsin2}
+	\caption{\label{fig:voltsin2} Another Sinusoidal Voltage Waveform\cite{b6}}
+\end{figure}
 
 
 
 \subsubsection{Mode Selection (AC/DC)} \- \indent
-	AC/DC Modes are one of the most fundamental mods of digital oscilloscopes in market. In this part we will build a module to build our own selection mode. One slide switch will be assigned to retrieve the desired mode information from the user. Based on this information, screen will display the input signal either with the DC offset or without the DC offset.
+
+	AC/DC Modes are one of the most fundamental mods of digital oscilloscopes in market. In this part we will build a module to build our own selection mode. One slide switch will be assigned to retrieve the desired mode information from the user. Based on this information, screen will display the input signal either with the DC offset or without the DC offset. Basic state diagram for this module can be seen at \textit{Figure~\ref{fig:acdc}}.
+
+\begin{figure}[h!]
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{acdc}
+	\caption{\label{fig:acdc} State Diagram for the Mode Selection}
+\end{figure}
+
+\- \\
 
 \subsubsection*{AC Mode} \- \indent
 	In AC Mode operation of the oscilloscope, the DC offset voltage is removed from the input voltage before it is reflected to the VGA monitor. For that the DC offset data found earlier will be removed from stored data.
@@ -356,6 +397,8 @@ combines the data from RAM and Computation Unit to create a signal that can be d
 	\caption{\label{fig:vgacontroller} Internal Structure of the VGA Controller}
 \end{figure}
 	
+\- \\[3cm]	
+	
 	
 \section{Conclusion}
 \- \indent
@@ -369,6 +412,10 @@ combines the data from RAM and Computation Unit to create a signal that can be d
 \bibitem{b3} P.P. Chu, Embedded SoPC Design with NIOS II Processor and Verilog Examples. New Jersey, 2012.
 %\bibitem{b3} “2N7000 Datasheet.” [Online]. Available: https://www.onsemi.com/pub/Collateral/2N7000-D.PDF. [Accessed: 20-Jan-2018].
 \bibitem{b4} "VGA Display Controller" [Online]. Avaible : https://learn.digilentinc.com/Documents/269
+
+\bibitem{b5} [Online]. Avaible : http://images.slideplayer.com/19/5725931/slides/slide\_2.jpg
+
+\bibitem{b6} [Online]. Avaible : http://slideplayer.com/slide/5725931/
 %\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
 %\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
 \end{thebibliography}
