@@ -250,6 +250,8 @@ FGPA, oscilloscope, ADC, VGA
 \subsection{Computation Unit} \- \indent
 	Computation unit is the unit responsible for all kinds of mathematical calculation of the project. For instance mean value calculation for the input signal are conducted in this unit. This Unit can be considered as a brain of the project. Some important parts are as follows,	
 
+\- \\
+
 \begin{figure}[h!]
 	\setlength{\unitlength}{\textwidth}
 	\center 
@@ -265,13 +267,37 @@ FGPA, oscilloscope, ADC, VGA
 	
 	After finding minimum and maximum points at the voltage waveform, peak-to-peak value is the difference between these values as can be seen from the \textit{Figure~\ref{fig:waveform}}.  	
 	
+\-\\
 	
 \subsubsection{Calculation of Mean Value}
+\- \indent
 
+	Mean value calculation is another essential part of the project since the requirements states that the voltage waveform needed to start from the mean value of the waveform. It should also be noted that mean value of the voltage waveform can sometimes be confused with the rms value of the same voltage waveform. However, assuming a sinusoidal voltage waveform as in \textit{Figure~\ref{fig:sinvolt}} the mean or average value of the voltage waveform can be calculated easily as follows:
+	
+	$$	v(t)~=~A+Bsin(2 \pi ft)	$$	
+	
+	$$	A+B~=~Maximum~value~of~the~voltage 	$$
+
+	$$	A-B~=~Minimum~value~of~the~voltage 	$$
+	
+	$$	V_{mean}~=~\frac{(A+B)+(A-B)}{2}~=~A~~Volts	$$	
+	
+	And, the peak-to-peak voltage can be found to be as;		
+		
+	$$ 	V_{P-P}~=~2B~~Volts	$$
+
+\begin{figure}[h!]
+	\setlength{\unitlength}{\textwidth}
+	\center 
+	\includegraphics[width=0.47\textwidth]{voltage2}
+	\caption{\label{fig:sinvolt} A sinusoidal Voltage Wave}
+\end{figure}
+
+\- \\
 
 \subsubsection{Calculation of DC Offset}
 
-DC offset is a mean amplitude displacement from
+	DC offset value can be summarized as a mean amplitude displacement from the ground level.
 
 
 \subsubsection{Calculation of Frequency}
@@ -321,7 +347,7 @@ The waveform, frequency, peak-to-peak voltages of the signals are dynamic measur
 
 The codes are written alongside with the aforementioned ideas, however, the display on the VGA screen could not be achieved. 
 
-combines the data from RAM and Computation Unit to create a signal that can be displayed on the VGA monitor. Each of the RAM Modules contains an image that is ready for display on the screen. However, the data must be positioned relative to each other and combined. Also this module performs once a second as desired in the project requirements. The VGA controller also gets data from different data inputs such as Time/div and Voltage/div in order to reflect the waveform as user requires. In this part multiple clock signals and counters needed to display the waveform accordingly. Basic VGA Controller can be seen at \textit{Figure~\ref{fig:vga_controller}}.
+combines the data from RAM and Computation Unit to create a signal that can be displayed on the VGA monitor. Each of the RAM Modules contains an image that is ready for display on the screen. However, the data must be positioned relative to each other and combined. Also this module performs once a second as desired in the project requirements. The VGA controller also gets data from different data inputs such as Time/div and Voltage/div in order to reflect the waveform as user requires. In this part multiple clock signals and counters needed to display the waveform accordingly. Basic VGA Controller can be seen at \textit{Figure~\ref{fig:vgacontroller}}.
 
 \begin{figure}[h!]
 	\setlength{\unitlength}{\textwidth}
