@@ -221,26 +221,28 @@ FGPA, oscilloscope, ADC, VGA
 \subsection{RAM} \- \indent
 	The main function of RAM is to introduce a block to the system that can be both writable and readable. Writing is necessary to save data coming from ADC and reading is also necessary to process the data and show them on VGA screen. The RAM should work with FIFO structure to realize proper operation on VGA screen. "A FIFO (first-in-first-out) buffer is an "elastic" storage between two subsystems."\cite{b3}. A FIFO based read and write operation is depicted in \textit{Figure~\ref{fig:fifo_diagram}}. The FIFO is designed and written, the resulting circuit block is shown in \textit{Figure~\ref{fig:fifo_diagram}}. The implemented FIFO has 8 bits of stack height and 12 bits of stack width. It also indicates when stacks are half-filled or full-filled.
 	
+	Throughout the project, the RAM unit functions as a memory of the system. Firstly, the data coming from the output of the ADC is written to the RAM and secondly, the necessary calculations are made by calculation unit and written the data again. Finally, with a proper frequency, the data is read by VGA controller in order to reflect the wanted signal to the monitor. If this part is not working properly, the overall project can not operate properly. 
+	
 	In the demo, this module wasn't shown due to incompleteness of the rest of the project, even though FIFO was working properly.
 	
 	\begin{figure}[t!]
 		\setlength{\unitlength}{\textwidth}
 		\center 
-		\includegraphics[width=0.47\textwidth]{fifo_diagram}
+		\includegraphics[width=0.45\textwidth]{fifo_diagram}
 		\caption{\label{fig:fifo_diagram}FIFO Working Principle\cite{b3}}
 	\end{figure}
 
 \begin{figure}[h!]
 			\setlength{\unitlength}{\textwidth}
 			\center 
-			\includegraphics[width=0.47\textwidth]{RAM_state}
+			\includegraphics[width=0.45\textwidth]{RAM_state}
 			\caption{\label{fig:RAM State} State Diagram for RAM}
 \end{figure}
 
 \begin{figure}[h!]
 	\setlength{\unitlength}{\textwidth}
 	\center 
-	\includegraphics[width=0.47\textwidth]{fifo_ports}
+	\includegraphics[width=0.45\textwidth]{fifo_ports}
 	\caption{\label{fig:fifo_ports} FIFO Block}
 \end{figure}
 		
@@ -255,7 +257,7 @@ FGPA, oscilloscope, ADC, VGA
 	\caption{\label{fig:waveform} Voltage Waveform and its Properties}
 \end{figure}
 
-\- \\[4cm]
+
 
 \subsection{Calculation of Peak-to-Peak Value }	
 \- \indent
@@ -280,7 +282,7 @@ DC offset is a mean amplitude displacement from
 	AC/DC Modes are one of the most fundamental mods of digital oscilloscopes in market. In this part we will build a module to build our own selection mode. One slide switch will be assigned to retrieve the desired mode information from the user. Based on this information, screen will display the input signal either with the DC offset or without the DC offset.
 
 \subsubsection{AC Mode} \- \indent
-	In AC Mode operation of the oscilloscope, the DC offset voltage is removed from the input voltage before it is reflected to the VGA monitor. For that Computation Unit will be used to extract offset information from stored data.
+	In AC Mode operation of the oscilloscope, the DC offset voltage is removed from the input voltage before it is reflected to the VGA monitor. For that the DC offset data found earlier will be removed from stored data.
 
 \subsubsection{DC Mode} \- \indent
 	In DC Mode operation of the oscilloscope, the DC offset voltage is untouched from the stored data of the input voltage. The stored data is reflected directly to the VGA monitor. 
