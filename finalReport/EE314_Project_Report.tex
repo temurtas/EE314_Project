@@ -228,21 +228,21 @@ FGPA, oscilloscope, ADC, VGA
 	\begin{figure}[t!]
 		\setlength{\unitlength}{\textwidth}
 		\center 
-		\includegraphics[width=0.45\textwidth]{fifo_diagram}
+		\includegraphics[width=0.47\textwidth]{fifo_diagram}
 		\caption{\label{fig:fifo_diagram}FIFO Working Principle\cite{b3}}
 	\end{figure}
 
 \begin{figure}[h!]
 			\setlength{\unitlength}{\textwidth}
 			\center 
-			\includegraphics[width=0.45\textwidth]{RAM_state}
+			\includegraphics[width=0.47\textwidth]{RAM_state}
 			\caption{\label{fig:RAM State} State Diagram for RAM}
 \end{figure}
 
 \begin{figure}[h!]
 	\setlength{\unitlength}{\textwidth}
 	\center 
-	\includegraphics[width=0.45\textwidth]{fifo_ports}
+	\includegraphics[width=0.47\textwidth]{fifo_ports}
 	\caption{\label{fig:fifo_ports} FIFO Block}
 \end{figure}
 		
@@ -259,32 +259,32 @@ FGPA, oscilloscope, ADC, VGA
 
 
 
-\subsection{Calculation of Peak-to-Peak Value }	
+\subsubsection{Calculation of Peak-to-Peak Value }	
 \- \indent
 	To find the peak-to-peak value of the input voltage, we needed to find the maximum and minimum voltage values of the given input. For that purpose we have used a well known sorting algorithm. Initially a point on the waveform was picked and every point next to it was compared to it. If the next point on the voltage is bigger than the initially stored value, the stored value is replaced with that value. After tracing every point on the waveform, the biggest value can be found. Similarly, the lowest value on the voltage waveform can be found. 
 	
 	After finding minimum and maximum points at the voltage waveform, peak-to-peak value is the difference between these values as can be seen from the \textit{Figure~\ref{fig:waveform}}.  	
 	
 	
-\subsection{Calculation of Mean Value}
+\subsubsection{Calculation of Mean Value}
 
 
-\subsection{Calculation of DC Offset}
+\subsubsection{Calculation of DC Offset}
 
 DC offset is a mean amplitude displacement from
 
 
-\subsection{Calculation of Frequency}
+\subsubsection{Calculation of Frequency}
 
 
 
-\subsection{Mode Selection (AC/DC)} \- \indent
+\subsubsection{Mode Selection (AC/DC)} \- \indent
 	AC/DC Modes are one of the most fundamental mods of digital oscilloscopes in market. In this part we will build a module to build our own selection mode. One slide switch will be assigned to retrieve the desired mode information from the user. Based on this information, screen will display the input signal either with the DC offset or without the DC offset.
 
-\subsubsection{AC Mode} \- \indent
+\subsubsection*{AC Mode} \- \indent
 	In AC Mode operation of the oscilloscope, the DC offset voltage is removed from the input voltage before it is reflected to the VGA monitor. For that the DC offset data found earlier will be removed from stored data.
 
-\subsubsection{DC Mode} \- \indent
+\subsubsection*{DC Mode} \- \indent
 	In DC Mode operation of the oscilloscope, the DC offset voltage is untouched from the stored data of the input voltage. The stored data is reflected directly to the VGA monitor. 
 	
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.28)  6 JUN 2018 10:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.28)  6 JUN 2018 10:58
 entering extended mode
 **./EE314_Project_Report.tex
 (EE314_Project_Report.tex
@@ -1073,13 +1073,13 @@ Package pdftex.def Info: adc_block.jpg used on input line 217.
 File: fifo_diagram.jpg Graphic file (type jpg)
  <use fifo_diagram.jpg>
 Package pdftex.def Info: fifo_diagram.jpg used on input line 231.
-(pdftex.def)             Requested size: 232.19843pt x 175.82785pt.
+(pdftex.def)             Requested size: 242.52063pt x 183.6493pt.
 
 <RAM_state.png, id=24, 298.86656pt x 310.15875pt>
 File: RAM_state.png Graphic file (type png)
  <use RAM_state.png>
 Package pdftex.def Info: RAM_state.png used on input line 238.
-(pdftex.def)             Requested size: 232.19843pt x 240.97632pt.
+(pdftex.def)             Requested size: 242.52063pt x 251.68628pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1088,7 +1088,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: fifo_ports.jpg Graphic file (type jpg)
  <use fifo_ports.jpg>
 Package pdftex.def Info: fifo_ports.jpg used on input line 245.
-(pdftex.def)             Requested size: 232.19843pt x 73.72238pt.
+(pdftex.def)             Requested size: 242.52063pt x 76.99745pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1103,10 +1103,7 @@ Package pdftex.def Info: voltage.png used on input line 256.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \vbox (badness 1681) has occurred while \output is active []
-
- [3 <./fifo_diagram.jpg> <./RAM_state.png> <./fifo_ports.jpg> <./voltage.png>]
+[3 <./fifo_diagram.jpg> <./RAM_state.png> <./fifo_ports.jpg> <./voltage.png>]
 <vgapins.png, id=37, 1236.87094pt x 380.92313pt>
 File: vgapins.png Graphic file (type png)
  <use vgapins.png>
@@ -1160,13 +1157,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 342--343
 -
  []
 
-[4 <./vgapins.png> <./VGAconfig.png> <./vga-hsync-vsync.jpg> <./vgacontroller.p
-ng>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 345--348
 []\OT1/ptm/m/n/8 "VGA Dis-play Con-troller" [On-line]. Avaible :
  []
 
-[5
+[4 <./vgapins.png> <./VGAconfig.png> <./vga-hsync-vsync.jpg> <./vgacontroller.p
+ng>] [5
 
 ] (EE314_Project_Report.aux)
 
@@ -1185,7 +1182,7 @@ Here is how much of TeX's memory you used:
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EE314_Project_Report.pdf (5 pages, 3191255 bytes).
+Output written on EE314_Project_Report.pdf (5 pages, 3190735 bytes).
 PDF statistics:
  64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
